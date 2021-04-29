@@ -1,0 +1,11 @@
+*.cover
+*.pyc
+.idea/*
+venv/*
+build/*
+dist/*
+test/*
+native/*
+__pychache__/*
+*.spec
+*.device.json
