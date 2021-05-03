@@ -1,5 +1,6 @@
 from ...devicemanager.device_manager import getLoadedDevices, areDevicesLoaded
 
+
 def onSendDeviceList(msg):
     response = {
         "devices_loaded": areDevicesLoaded()

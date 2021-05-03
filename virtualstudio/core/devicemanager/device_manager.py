@@ -5,8 +5,8 @@ from libmidictrl.device_manager.device_manager import getDevices as getMIDIDevic
 from streamdeck.device_manager import DeviceManager as ElgatoDeviceManager
 
 from virtualstudio.common.structs.hardware.hardware_wrapper import HardwareWrapper
-from virtualstudio.core.devicemanager.hardware.impl import MidiDeviceWrapper
-from virtualstudio.core.devicemanager.hardware.elgato import StreamdeckDeviceWrapper
+from virtualstudio.core.devicemanager.hardware.midi.midi_device_wrapper import MidiDeviceWrapper
+from virtualstudio.core.devicemanager.hardware.elgato.elgato_streamdeck_wrapper import StreamdeckDeviceWrapper
 
 DEVICES: Optional[Dict[str, HardwareWrapper]] = None
 

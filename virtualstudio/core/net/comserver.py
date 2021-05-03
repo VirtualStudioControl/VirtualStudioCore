@@ -3,6 +3,7 @@ import json
 from virtualstudio.common.net.tcp_server import TCPServer
 from virtualstudio.common.net.protocols.virtualstudiocom.constants import *
 from .requesthandlers.devicerequesthandlers import *
+from .requesthandlers.actionrequesthandlers import *
 
 
 class ComServer (TCPServer):
@@ -13,6 +14,7 @@ class ComServer (TCPServer):
         self.loadRequestHandlers()
 
     def loadRequestHandlers(self):
+        self.addRequestHandler(REQ_ACTION_LIST, onSendActionList)
         self.addRequestHandler(REQ_DEVICE_LIST, onSendDeviceList)
 
     def addRequestHandler(self, request, handler):
@@ -25,10 +27,8 @@ class ComServer (TCPServer):
 
         msg_id = msg[INTERN_MESSAGE_ID]
         response = None
-        print(msg)
-        print(self.requestHandler)
+
         if msg[INTERN_REQUEST_TYPE] in self.requestHandler.keys():
-            print("Generating Response")
             response = self.requestHandler[msg[INTERN_REQUEST_TYPE]](msg)
 
         if response is not None:
