@@ -2,6 +2,7 @@ import sys
 import streamdeck.transport.LibUSBHIDAPI as LibUSBHIDAPI
 
 from virtualstudio.common.logging import logengine
+from virtualstudio.common.plugin.module_loader import loadModulesFromPath
 from virtualstudio.common.action_manager.actionmanager import loadActions
 
 from virtualstudio.core.devicemanager.device_manager import loadDevices
@@ -16,6 +17,7 @@ from virtualstudio.core.actions.device.multiactionlauncher import MultiActionLau
 
 def setConfiguration():
     LibUSBHIDAPI.NATIVE_LIB_PATH = config.NATIVE_LIBRARY_PATH_HIDAPI
+    loadModulesFromPath(config.PLUGIN_DIRECTORY)
 
 
 def run():

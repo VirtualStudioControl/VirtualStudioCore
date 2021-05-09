@@ -8,7 +8,7 @@ Port for Communication with the configuration tool
 #endregion
 
 #region Plugins
-PLUGIN_DIRECTORY = ""
+PLUGIN_DIRECTORY = "B:/Repositorys/ChaosStudio/VirtualStudioPlugins"
 """
 Directory containing all cross-platform plugins
 """
