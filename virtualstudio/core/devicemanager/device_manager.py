@@ -40,3 +40,8 @@ def loadDevices() -> Dict[str, HardwareWrapper]:
 
     return DEVICES
 
+
+def getDeviceByID(deviceID: str) -> Optional[HardwareWrapper]:
+    if DEVICES is None or deviceID not in DEVICES:
+        return None
+    return DEVICES[deviceID]

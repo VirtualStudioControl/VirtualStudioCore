@@ -18,13 +18,3 @@ def onSendActionList(msg):
     response["categories"] = listCategoryIcons()
 
     return response
-
-def onSendActionIcon(msg):
-    actionID = msg['payload']['actionID']
-    action = getActionByID(actionID)
-
-    if action is not None:
-        return {
-            'icon': action.getIcon()
-        }
-    return {}

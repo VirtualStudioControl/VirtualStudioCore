@@ -2,8 +2,10 @@ import json
 
 from virtualstudio.common.net.tcp_server import TCPServer
 from virtualstudio.common.net.protocols.virtualstudiocom.constants import *
-from .requesthandlers.devicerequesthandlers import *
+
 from .requesthandlers.actionrequesthandlers import *
+from .requesthandlers.devicerequesthandlers import *
+from .requesthandlers.profilerequesthandler import *
 
 
 class ComServer (TCPServer):
@@ -16,6 +18,8 @@ class ComServer (TCPServer):
     def loadRequestHandlers(self):
         self.addRequestHandler(REQ_ACTION_LIST, onSendActionList)
         self.addRequestHandler(REQ_DEVICE_LIST, onSendDeviceList)
+
+        self.addRequestHandler(REQ_PROFILE_SET, onSendProfileSet)
 
     def addRequestHandler(self, request, handler):
         self.requestHandler[request] = handler
