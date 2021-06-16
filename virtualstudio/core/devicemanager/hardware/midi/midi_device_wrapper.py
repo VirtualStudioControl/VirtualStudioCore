@@ -11,4 +11,5 @@ class MidiDeviceWrapper(HardwareWrapper):
         return HARDWARE_TYPE_MIDI
 
     def bindProfile(self, profile):
+        self.currentProfile = profile.name
         pass

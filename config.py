@@ -8,7 +8,7 @@ Port for Communication with the configuration tool
 #endregion
 
 #region Plugins
-PLUGIN_DIRECTORY = "B:/Repositorys/ChaosStudio/VirtualStudioPlugins"
+PLUGIN_DIRECTORY = "../VirtualStudioPlugins"
 """
 Directory containing all cross-platform plugins
 """
@@ -19,9 +19,14 @@ Directory containing all platform specific plugins
 #endregion
 
 #region Data
-PROFILE_DATA_DIRECTORY = ""
+PROFILE_DATA_DIRECTORY = "./data/profile"
 """
 Direcotry containing profile data
+"""
+
+PROFILE_SET_DATA_FILE = "profilesets.json"
+"""
+ProfileSet to 
 """
 #endregion
 

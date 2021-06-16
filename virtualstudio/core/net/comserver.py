@@ -17,9 +17,16 @@ class ComServer (TCPServer):
 
     def loadRequestHandlers(self):
         self.addRequestHandler(REQ_ACTION_LIST, onSendActionList)
+        self.addRequestHandler(REQ_GET_ACTION_STATES, onGetActionStates)
+        self.addRequestHandler(REQ_GET_ACTION_WIDGET, onGetActionWidget)
+
         self.addRequestHandler(REQ_DEVICE_LIST, onSendDeviceList)
 
         self.addRequestHandler(REQ_PROFILE_SET, onSendProfileSet)
+        self.addRequestHandler(REQ_SET_CURRENT_PROFILE, onSetCurrentProfile)
+        self.addRequestHandler(REQ_ADD_PROFILE, onAddProfileToSet)
+        self.addRequestHandler(REQ_UPDATE_PROFILE, onUpdateProfile)
+        self.addRequestHandler(REQ_REMOVE_PROFILE, onRemoveProfile)
 
     def addRequestHandler(self, request, handler):
         self.requestHandler[request] = handler
