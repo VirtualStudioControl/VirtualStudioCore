@@ -1,22 +1,13 @@
+from collections import Callable
+from typing import Union, Any
+
+from virtualstudio.common.io import filewriter
+from virtualstudio.common.structs.action.action_info import ActionInfo
+from virtualstudio.common.structs.hardware.controls.imagebutton_wrapper import ImagebuttonWrapper
 from virtualstudio.common.structs.hardware.hardware_wrapper import *
 
 from streamdeck.devices.streamdeck import StreamDeck
-
-
-STREAMDECK_ICON_RESOLUTION = {
-    "Stream Deck Mini": (80, 80),
-    "Stream Deck Original": (72, 72),
-    "Stream Deck Original (V2)": (72, 72),
-    "Stream Deck XL": (96, 96),
-}
-
-
-STREAMDECK_ICON_FORMAT = {
-    "Stream Deck Mini": "BMP",
-    "Stream Deck Original": "BMP",
-    "Stream Deck Original (V2)": "JPEG",
-    "Stream Deck XL": "JPEG",
-}
+from virtualstudio.common.tools import actiondatatools, icontools
 
 
 class StreamdeckDeviceWrapper(HardwareWrapper):
@@ -24,11 +15,50 @@ class StreamdeckDeviceWrapper(HardwareWrapper):
     def __init__(self, device: StreamDeck):
         super().__init__(device, device.id(), device.deck_type(), "Elgato")
 
+        device.open()
+
+        self.createControlWrappers()
+
+    def close(self):
+        self.device.close()
+
+    def createControlWrappers(self):
+
+        for i in range(self.device.key_count()):
+            self.setupImageButtonWrapper(i)
+        self.device.set_key_callback(self.__keyCallback)
+
+    def setupImageButtonWrapper(self, idx: int):
+        wrapper = ImagebuttonWrapper(imageSetter=self.__generateSetImage(idx))
+        self.device : StreamDeck
+
+        wrapper.setImage(self.device.BLANK_KEY_IMAGE)
+        self.controls.append(wrapper)
+
+    def __keyCallback(self, device, buttonID: int, isDown: bool):
+        control = self.controls[buttonID]
+
+        if isDown:
+            control.keyDown()
+        else:
+            control.keyUp()
+
+    def __generateSetImage(self, index):
+        def __cb(data: Any) -> bool:
+            try:
+                self.device.set_key_image(index, data)
+            except:
+                return False
+            return True
+
+        return __cb
+
     def getHardwareParameters(self) -> Optional[Dict]:
         parameters = {}
 
-        parameters["icon_resolution"] = STREAMDECK_ICON_RESOLUTION[self.name]
-        parameters["icon_format"] = STREAMDECK_ICON_FORMAT[self.name]
+        parameters["icon_resolution"] = (self.device.KEY_PIXEL_WIDTH, self.device.KEY_PIXEL_HEIGHT)
+        parameters["icon_format"] = self.device.KEY_IMAGE_FORMAT
+        parameters["icon_flip"] = self.device.KEY_FLIP
 
         return parameters
 
