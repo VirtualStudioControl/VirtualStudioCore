@@ -4,12 +4,13 @@ from libmidictrl.controls.abstract_control import AbstractControl
 from libmidictrl.controls.button import Button
 from libmidictrl.controls.fader import Fader
 from libmidictrl.controls.rotary import RotaryEncoder
+from libmidictrl.devices.device_interface import IDevice
+
 from virtualstudio.common.structs.hardware.controls.button_wrapper import ButtonWrapper
 from virtualstudio.common.structs.hardware.controls.fader_wrapper import FaderWrapper
 from virtualstudio.common.structs.hardware.controls.rotaryencoder_wrapper import RotaryEncoderWrapper
 from virtualstudio.common.structs.hardware.hardware_wrapper import *
 
-from libmidictrl.devices.device_interface import IDevice
 
 class MidiDeviceWrapper(HardwareWrapper):
 
@@ -30,7 +31,6 @@ class MidiDeviceWrapper(HardwareWrapper):
         self.device: IDevice
 
         controls = []
-        print(self.device)
         controls.extend(self.device.getButtons())
         controls.extend(self.device.getFaders())
         controls.extend(self.device.getRotaryEncoders())
@@ -44,6 +44,7 @@ class MidiDeviceWrapper(HardwareWrapper):
                 self.appendFaderWrapper(c)
             elif isinstance(c, RotaryEncoder):
                 self.appendRotaryEncoderWrapper(c)
+
     #region Button
     def appendButtonWrapper(self, c: Button):
         wrapper = ButtonWrapper(ledStateSetter=self.__generateLEDSetterBTN(c))
@@ -54,14 +55,14 @@ class MidiDeviceWrapper(HardwareWrapper):
     def __generateButtonWrapperCallbackPressed(self, wrapper: ButtonWrapper):
 
         def cb(message: List[int], deltatime):
-            print("Button Pressed !")
+            wrapper.keyDown()
 
         return cb
 
     def __generateButtonWrapperCallbackReleased(self, wrapper: ButtonWrapper):
 
         def cb(message: List[int], deltatime):
-            print("Button Released !")
+            wrapper.keyUp()
 
         return cb
 
@@ -81,25 +82,25 @@ class MidiDeviceWrapper(HardwareWrapper):
         wrapper = FaderWrapper(faderValueSetter=self.__generateValueSetterFader(c))
         self.device: IDevice
         if c.status_touch_begin == c.status_touch_end:
-            self.device.addEventListener(c.status_touch_begin, c.idTouch, self.__generateFaderTouchCallback(c))
+            self.device.addEventListener(c.status_touch_begin, c.idTouch, self.__generateFaderTouchCallback(wrapper))
         else:
-            self.device.addEventListener(c.status_touch_begin, c.idTouch, self.__generateFaderTouchCallback(c))
-            self.device.addEventListener(c.status_touch_end, c.idTouch, self.__generateFaderTouchCallback(c))
-        self.device.addEventListener(c.status_value_changed, c.idIn, self.__generateFaderValueCallback(c))
+            self.device.addEventListener(c.status_touch_begin, c.idTouch, self.__generateFaderTouchCallback(wrapper))
+            self.device.addEventListener(c.status_touch_end, c.idTouch, self.__generateFaderTouchCallback(wrapper))
+        self.device.addEventListener(c.status_value_changed, c.idIn, self.__generateFaderValueCallback(wrapper))
         self.controls[c.index] = wrapper
 
-    def __generateFaderTouchCallback(self, c: Fader):
+    def __generateFaderTouchCallback(self, wrapper: FaderWrapper):
         def cb(message: List[int], deltatime):
             if message[2] > 63:
-                print("Fader Touched !")
+                wrapper.touchStart()
             else:
-                print("Fader Released !")
+                wrapper.touchEnd()
 
         return cb
 
-    def __generateFaderValueCallback(self, c: Fader):
+    def __generateFaderValueCallback(self, wrapper: FaderWrapper):
         def cb(message: List[int], deltatime):
-            print("Fader Value:", message[2])
+            wrapper.touchValueChanged(message[2])
 
         return cb
 
@@ -121,25 +122,25 @@ class MidiDeviceWrapper(HardwareWrapper):
         self.device: IDevice
 
         if c.status_up == c.status_down:
-            self.device.addEventListener(c.status_up, c.idClick, self.__generateRotaryEncoderClickCallback(c))
+            self.device.addEventListener(c.status_up, c.idClick, self.__generateRotaryEncoderClickCallback(wrapper))
         else:
-            self.device.addEventListener(c.status_up, c.idClick, self.__generateRotaryEncoderClickCallback(c))
-            self.device.addEventListener(c.status_down, c.idClick, self.__generateRotaryEncoderClickCallback(c))
-        self.device.addEventListener(c.status_value_changed, c.idIn, self.__generateRotaryEncoderValueCallback(c))
+            self.device.addEventListener(c.status_up, c.idClick, self.__generateRotaryEncoderClickCallback(wrapper))
+            self.device.addEventListener(c.status_down, c.idClick, self.__generateRotaryEncoderClickCallback(wrapper))
+        self.device.addEventListener(c.status_value_changed, c.idIn, self.__generateRotaryEncoderValueCallback(wrapper))
         self.controls[c.index] = wrapper
 
-    def __generateRotaryEncoderClickCallback(self, c: RotaryEncoder):
+    def __generateRotaryEncoderClickCallback(self, wrapper: RotaryEncoderWrapper):
         def cb(message: List[int], deltatime):
             if message[2] > 63:
-                print("Rotary Encoder Pressed !")
+                wrapper.keyDown()
             else:
-                print("Rotary Encoder Released !")
+                wrapper.keyUp()
 
         return cb
 
-    def __generateRotaryEncoderValueCallback(self, c: RotaryEncoder):
+    def __generateRotaryEncoderValueCallback(self, wrapper: RotaryEncoderWrapper):
         def cb(message: List[int], deltatime):
-            print("Rotary Encoder Value:", message[2])
+            wrapper.rotate(message[2])
 
         return cb
 
@@ -163,7 +164,3 @@ class MidiDeviceWrapper(HardwareWrapper):
         return __cb
 
     #endregion
-
-    def bindProfile(self, profile):
-        self.currentProfile = profile.name
-        pass

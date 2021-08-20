@@ -26,8 +26,14 @@ Direcotry containing profile data
 
 PROFILE_SET_DATA_FILE = "profilesets.json"
 """
-ProfileSet to 
+Serialised ProfileSets
 """
+
+DEVICE_CURRENT_PROFILE_NAME = "profilenames.json"
+"""
+Current Profile Name per device
+"""
+
 #endregion
 
 #region Native Libray search paths

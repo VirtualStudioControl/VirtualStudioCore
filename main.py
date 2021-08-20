@@ -34,9 +34,10 @@ def loadData():
 
 def run():
     try:
-        loadDevices()
         loadActions()
         loadData()
+        loadDevices()
+
         server: ComServer = ComServer("127.0.0.1", config.CONFIGURATION_PORT)
         server.start()
         while(True):

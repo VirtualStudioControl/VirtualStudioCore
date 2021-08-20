@@ -19,6 +19,7 @@ class ComServer (TCPServer):
         self.addRequestHandler(REQ_ACTION_LIST, onSendActionList)
         self.addRequestHandler(REQ_GET_ACTION_STATES, onGetActionStates)
         self.addRequestHandler(REQ_GET_ACTION_WIDGET, onGetActionWidget)
+        self.addRequestHandler(REQ_SET_ACTION_DATA, onSetActionData)
 
         self.addRequestHandler(REQ_DEVICE_LIST, onSendDeviceList)
 

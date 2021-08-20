@@ -1,9 +1,13 @@
 from virtualstudio.common.action_manager.actionmanager import getAllLaunchers, areActionsLoaded, getActionByID, listCategoryIcons
+from virtualstudio.common.profile_manager.profilemanager import getOrCreateProfileSet, getProfileSetFromFamily, \
+    getOrCreateProfileSetFromFamily
+from virtualstudio.common.structs.action.abstract_action import AbstractAction
 
 from virtualstudio.common.structs.action.action_launcher import ActionLauncher, UI_TYPE_INVALID
 from virtualstudio.common.structs.action.action_info import ActionInfo, fromDict as actionInfoFromDict
 
 from virtualstudio.common.net.protocols.virtualstudiocom import constants
+from virtualstudio.core.tools import tools
 
 
 def onSendActionList(msg):
@@ -45,7 +49,7 @@ def onGetActionStates(msg):
 
 
 def onGetActionWidget(msg):
-    actionInfo: ActionInfo = actionInfoFromDict(msg[constants.REQ_GET_ACTION_STATES_PARAM_ACTION])
+    actionInfo: ActionInfo = actionInfoFromDict(msg[constants.REQ_GET_ACTION_WIDGET_PARAM_ACTION])
 
     try:
         actionLauncher = getActionByID(actionInfo.launcher)
@@ -66,6 +70,22 @@ def onGetActionWidget(msg):
 
 
 def onSetActionData(msg):
-    #TODO: Implement
-    print("onSetActionData NOT IMPLEMENTED ! // actionrequesthandlers")
-    pass
+    actionInfo: ActionInfo = actionInfoFromDict(msg[constants.REQ_SET_ACTION_DATA_PARAM_ACTION])
+    data = msg[constants.REQ_SET_ACTION_DATA_PARAM_DATA]
+
+    profileSet = getOrCreateProfileSetFromFamily(actionInfo.deviceFamily)
+    profile = profileSet.getOrCreateProfile(actionInfo.profileName)
+
+    action: AbstractAction = profile.getAction(actionInfo.control)
+    if action is not None:
+        action.storeParams(data)
+    else:
+        profile.setAction(actionInfo.control, actionInfo)
+
+    tools.saveProfileSets()
+
+    response = {
+        "success": True
+    }
+
+    return response

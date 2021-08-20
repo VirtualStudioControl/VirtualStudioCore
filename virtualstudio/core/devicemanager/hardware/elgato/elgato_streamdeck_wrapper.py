@@ -64,6 +64,3 @@ class StreamdeckDeviceWrapper(HardwareWrapper):
 
     def getType(self):
         return HARDWARE_TYPE_ELGATO
-
-    def bindProfile(self, profile):
-        self.currentProfile = profile.name
