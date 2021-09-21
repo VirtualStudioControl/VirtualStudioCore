@@ -1,4 +1,4 @@
-from typing import Dict, Optional
+from typing import Dict, Optional, List
 
 from libmidictrl.device_manager.device_manager import getDevices as getMIDIDevices
 
@@ -21,6 +21,16 @@ def getLoadedDevices() -> Dict[str, HardwareWrapper]:
     if DEVICES is not None:
         return DEVICES
     return {}
+
+
+def getLoadedDeviceNames() -> List[str]:
+    global DEVICES
+    if DEVICES is not None:
+        result = []
+        for key in DEVICES:
+            result.append(DEVICES[key].getHardwareFamily())
+        return result
+    return []
 
 
 def loadDevices() -> Dict[str, HardwareWrapper]:
