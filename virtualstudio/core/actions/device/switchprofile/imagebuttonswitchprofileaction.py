@@ -1,3 +1,4 @@
+from virtualstudio.common.profile_manager import profilemanager
 from virtualstudio.common.structs.action.imagebutton_action import ImageButtonAction
 from virtualstudio.core.devicemanager import device_manager
 
@@ -24,6 +25,10 @@ class ImageButtonSwitchProfileAction(ImageButtonAction):
 
     def onParamsChanged(self, parameters: dict):
         print(parameters)
+        profileSet = profilemanager.getProfileSetFromFamily(self.getGUIParameter("combo_device", "currentText"))
+        print(profileSet.getProfileNames())
+        self.setGUIParameter("combo_profile", "itemTexts", profileSet.getProfileNames())
+        #self.setGUIParameter("combo_profile", "", profileSet.getProfileNames())
 
     #endregion
 

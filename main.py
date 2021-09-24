@@ -4,11 +4,13 @@ from time import sleep
 import streamdeck.transport.LibUSBHIDAPI as LibUSBHIDAPI
 
 from virtualstudio.common.logging import logengine
+from virtualstudio.common.eventmanager import eventmanager
 from virtualstudio.common.plugin.module_loader import loadModulesFromPath
 from virtualstudio.common.action_manager.actionmanager import loadActions
 from virtualstudio.common.io.configtools import readJSON, writeJSON
 from virtualstudio.common.profile_manager import profilemanager
 
+from virtualstudio.core.data import constants as consts
 from virtualstudio.core.devicemanager.device_manager import loadDevices, closeDevices
 from virtualstudio.core.net.comserver import ComServer
 
@@ -38,12 +40,16 @@ def run():
         loadData()
         loadDevices()
 
-        server: ComServer = ComServer("127.0.0.1", config.CONFIGURATION_PORT)
-        server.start()
-        while(True):
-            sleep(1)
+        consts.COM_SERVER = ComServer("127.0.0.1", config.CONFIGURATION_PORT)
+        eventmanager.registerSink(consts.COM_SERVER.sendMessageJSON)
+        consts.COM_SERVER.run()
+
     finally:
+        print("Closing Devices")
         closeDevices()
+#        while(True):
+#            sleep(1)
+
 
 
 if __name__ == "__main__":
