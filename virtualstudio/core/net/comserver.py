@@ -3,6 +3,7 @@ import json
 from virtualstudio.common.net.tcp_server import TCPServer
 from virtualstudio.common.net.protocols.virtualstudiocom.constants import *
 
+from .requesthandlers.accountrequesthandler import *
 from .requesthandlers.actionrequesthandlers import *
 from .requesthandlers.devicerequesthandlers import *
 from .requesthandlers.profilerequesthandler import *
@@ -16,6 +17,9 @@ class ComServer (TCPServer):
         self.loadRequestHandlers()
 
     def loadRequestHandlers(self):
+        self.addRequestHandler(REQ_ACCOUNT_LIST, onSendAccountList)
+        self.addRequestHandler(REQ_ACCOUNT_SET_DATA, onSetAccountData)
+
         self.addRequestHandler(REQ_ACTION_LIST, onSendActionList)
         self.addRequestHandler(REQ_GET_ACTION_STATES, onGetActionStates)
         self.addRequestHandler(REQ_GET_ACTION_WIDGET, onGetActionWidget)

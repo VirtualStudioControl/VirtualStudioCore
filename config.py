@@ -19,6 +19,16 @@ Directory containing all platform specific plugins
 #endregion
 
 #region Data
+ACCOUNT_DATA_DIRECTORY = "./data/account"
+"""
+Direcotry containing profile data
+"""
+
+ACCOUNT_DATA_FILE = "accounts.json"
+"""
+Serialised ProfileSets
+"""
+
 PROFILE_DATA_DIRECTORY = "./data/profile"
 """
 Direcotry containing profile data

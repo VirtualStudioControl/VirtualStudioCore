@@ -1,6 +1,8 @@
 from virtualstudio.common.profile_manager import profilemanager
+from virtualstudio.common.profile_manager.profilemanager import getOrCreateProfileSet
 from virtualstudio.common.structs.action.imagebutton_action import ImageButtonAction
 from virtualstudio.core.devicemanager import device_manager
+from virtualstudio.core.devicemanager.device_manager import getDeviceByID, deviceNameToID
 
 
 class ImageButtonSwitchProfileAction(ImageButtonAction):
@@ -11,8 +13,9 @@ class ImageButtonSwitchProfileAction(ImageButtonAction):
         pass
 
     def onAppear(self):
-        self.setGUIParameter("combo_device", "itemTexts", device_manager.getLoadedDeviceNames())
-        self.setGUIParameter("combo_profile", "itemTexts", ["Profile A", "Profile B"])
+        self.ensureGUIParameter("combo_device", "itemTexts", device_manager.getLoadedDeviceNames())
+        profileSet = profilemanager.getProfileSetFromFamily(device_manager.getLoadedDeviceNames()[0])
+        self.ensureGUIParameter("combo_profile", "itemTexts", profileSet.getProfileNames())
 
     def onDisappear(self):
         pass
@@ -24,11 +27,14 @@ class ImageButtonSwitchProfileAction(ImageButtonAction):
         pass
 
     def onParamsChanged(self, parameters: dict):
-        print(parameters)
         profileSet = profilemanager.getProfileSetFromFamily(self.getGUIParameter("combo_device", "currentText"))
-        print(profileSet.getProfileNames())
-        self.setGUIParameter("combo_profile", "itemTexts", profileSet.getProfileNames())
-        #self.setGUIParameter("combo_profile", "", profileSet.getProfileNames())
+        if profileSet is not None:
+            profileNames = profileSet.getProfileNames()
+            if self.getGUIParameter("combo_profile", "currentText") not in profileNames and len(profileNames) > 0:
+                self.setGUIParameter("combo_profile", "currentIndex", 0, silent=True)
+                self.setGUIParameter("combo_profile", "currentText", profileNames[0], silent=True)
+
+            self.setGUIParameter("combo_profile", "itemTexts", profileNames)
 
     #endregion
 
@@ -41,6 +47,8 @@ class ImageButtonSwitchProfileAction(ImageButtonAction):
         device = self.getGUIParameter("combo_device", "currentText")
         profile = self.getGUIParameter("combo_profile", "currentText")
 
-        print("Switching {} to {}".format(device, profile))
+        hardware = getDeviceByID(deviceNameToID(device))
+        profileSet = getOrCreateProfileSet(hardware)
+        hardware.bindProfile(profileSet.getProfile(profile))
 
     #endregion

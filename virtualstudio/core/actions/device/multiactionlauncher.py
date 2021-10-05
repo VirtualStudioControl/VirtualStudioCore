@@ -5,7 +5,7 @@ from virtualstudio.common.action_manager.actionmanager import registerCategoryIc
 from virtualstudio.common.structs.action.action_launcher import *
 from virtualstudio.common.tools.icontools import readPNGIcon
 
-class MultiActionLauncher(ActionLauncher):
+class MultiActionLauncher(): # ActionLauncher # Disabled until MultiAction UI is implemented
 
     def __init__(self):
         super(MultiActionLauncher, self).__init__()

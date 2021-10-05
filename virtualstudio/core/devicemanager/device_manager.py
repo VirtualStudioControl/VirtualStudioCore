@@ -11,6 +11,9 @@ from virtualstudio.core.devicemanager.hardware.elgato.elgato_streamdeck_wrapper 
 
 DEVICES: Optional[Dict[str, HardwareWrapper]] = None
 
+DEVICE_NAMES: Optional[List[str]] = None
+DEVICE_NAME_MAPPING: Optional[Dict[str, str]] = None
+
 
 def areDevicesLoaded():
     return DEVICES is not None
@@ -24,14 +27,30 @@ def getLoadedDevices() -> Dict[str, HardwareWrapper]:
 
 
 def getLoadedDeviceNames() -> List[str]:
-    global DEVICES
-    if DEVICES is not None:
-        result = []
+    global DEVICE_NAMES
+    if DEVICE_NAMES is None:
+        global DEVICES
+        global DEVICE_NAME_MAPPING
+        DEVICE_NAMES = []
+        DEVICE_NAME_MAPPING = {}
+        device_families = {}
         for key in DEVICES:
-            result.append(DEVICES[key].getHardwareFamily())
-        return result
-    return []
+            family = DEVICES[key].getHardwareFamily()
+            if family not in device_families:
+                name = family
+                device_families[family] = 1
+            else:
+                name = "{} ({})".format(family, device_families[family])
+                device_families[family] = device_families[family] +1
+            DEVICE_NAMES.append(name)
+            DEVICE_NAME_MAPPING[name] = key
+    return DEVICE_NAMES
 
+
+def deviceNameToID(name: str):
+    if name in DEVICE_NAME_MAPPING:
+        return DEVICE_NAME_MAPPING[name]
+    return name
 
 def loadDevices() -> Dict[str, HardwareWrapper]:
     global DEVICES

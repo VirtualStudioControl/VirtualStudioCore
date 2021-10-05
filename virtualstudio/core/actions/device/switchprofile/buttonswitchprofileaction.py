@@ -1,16 +1,21 @@
+from virtualstudio.common.profile_manager import profilemanager
+from virtualstudio.common.profile_manager.profilemanager import getOrCreateProfileSet
 from virtualstudio.common.structs.action.button_action import ButtonAction
+from virtualstudio.core.devicemanager import device_manager
+from virtualstudio.core.devicemanager.device_manager import getDeviceByID, deviceNameToID
 
 
 class ButtonSwitchProfileAction(ButtonAction):
 
-    #region handlers
+    # region handlers
 
     def onLoad(self):
-        self.setGUIParameter("combo_device", "itemTexts", ["Device A", "Device B"])
-        print(self.getParams())
+        pass
 
     def onAppear(self):
-        pass
+        self.setGUIParameter("combo_device", "itemTexts", device_manager.getLoadedDeviceNames())
+        profileSet = profilemanager.getProfileSetFromFamily(device_manager.getLoadedDeviceNames()[0])
+        self.setGUIParameter("combo_profile", "itemTexts", profileSet.getProfileNames())
 
     def onDisappear(self):
         pass
@@ -22,16 +27,28 @@ class ButtonSwitchProfileAction(ButtonAction):
         pass
 
     def onParamsChanged(self, parameters: dict):
-        pass
+        profileSet = profilemanager.getProfileSetFromFamily(self.getGUIParameter("combo_device", "currentText"))
+        if profileSet is not None:
+            profileNames = profileSet.getProfileNames()
+            if self.getGUIParameter("combo_profile", "currentText") not in profileNames and len(profileNames) > 0:
+                self.setGUIParameter("combo_profile", "currentIndex", 0, silent=True)
+                self.setGUIParameter("combo_profile", "currentText", profileNames[0], silent=True)
 
-    #endregion
+            self.setGUIParameter("combo_profile", "itemTexts", profileNames)
 
-    #region Hardware Event Handlers
+    # endregion
+
+    # region Hardware Event Handlers
 
     def onKeyDown(self):
         pass
 
     def onKeyUp(self):
-        pass
+        device = self.getGUIParameter("combo_device", "currentText")
+        profile = self.getGUIParameter("combo_profile", "currentText")
 
-    #endregion
+        hardware = getDeviceByID(deviceNameToID(device))
+        profileSet = getOrCreateProfileSet(hardware)
+        hardware.bindProfile(profileSet.getProfile(profile))
+
+    # endregion
