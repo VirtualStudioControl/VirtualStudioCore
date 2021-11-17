@@ -11,6 +11,7 @@ from virtualstudio.common.structs.hardware.controls.fader_wrapper import FaderWr
 from virtualstudio.common.structs.hardware.controls.rotaryencoder_wrapper import RotaryEncoderWrapper
 from virtualstudio.common.structs.hardware.hardware_wrapper import *
 
+logger = logengine.getLogger()
 
 class MidiDeviceWrapper(HardwareWrapper):
 
@@ -38,6 +39,7 @@ class MidiDeviceWrapper(HardwareWrapper):
         self.controls: List = [None] * len(controls)
 
         for c in controls:
+            logger.debug(c)
             if isinstance(c, Button):
                 self.appendButtonWrapper(c)
             elif isinstance(c, Fader):
@@ -154,8 +156,8 @@ class MidiDeviceWrapper(HardwareWrapper):
         return __cb
 
     def __generateModeSetterRotaryEncoder(self, c: RotaryEncoder) -> Callable[[int], bool]:
-        def __cb(value: int) -> bool:
-            if value < 0 or value > 127:
+        def __cb(value: Optional[int]) -> bool:
+            if value is None or value < 0 or value > 127:
                 return False
             c.device.setLayer(c.layer)
             c.device.setRotaryLEDMode(c, value)

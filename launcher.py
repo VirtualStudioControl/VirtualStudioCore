@@ -1,0 +1,14 @@
+import sys
+
+STREAMDECK_LIBRARY_PATH = ""
+LIBMIDICTRL_LIBRARY_PATH = ""
+VIRTUAL_STUDIO_COMMON_PATH = ""
+
+
+sys.path.append(STREAMDECK_LIBRARY_PATH)
+sys.path.append(LIBMIDICTRL_LIBRARY_PATH)
+sys.path.append(VIRTUAL_STUDIO_COMMON_PATH)
+
+import main
+
+main.run()

@@ -24,10 +24,19 @@ from virtualstudio.core.actions.device.switchprofilelauncher import SwitchProfil
 from virtualstudio.core.actions.device.multiactionlauncher import MultiActionLauncher
 #endregion
 
+
+def initialiseLogging():
+    logengine.LOG_FORMAT = config.LOG_FORMAT
+    logengine.LOG_TO_CONSOLE = config.LOG_TO_CONSOLE
+
+
 def setConfiguration():
     LibUSBHIDAPI.NATIVE_LIB_PATH = config.NATIVE_LIBRARY_PATH_HIDAPI
 
-    loadModulesFromPath(config.PLUGIN_DIRECTORY)
+    for path in config.PLUGIN_DIRECTORY:
+        sys.path.append(path)
+        loadModulesFromPath(path)
+
 
 def loadData():
     try:
@@ -37,12 +46,16 @@ def loadData():
         print(err)
         #pass # Ignored, If no Profile file is found, just use new empty Profilesets
 
+
 def loadAccounts():
     account_manager.storeAccountData = storeAccounts
     loadAccountManager()
 
+
 def run():
+    setConfiguration()
     try:
+        initialiseLogging()
         loadAccounts()
         loadActions()
         loadData()
@@ -59,9 +72,5 @@ def run():
 #            sleep(1)
 
 
-
 if __name__ == "__main__":
-    setConfiguration()
-
     run()
-

@@ -52,6 +52,7 @@ def deviceNameToID(name: str):
         return DEVICE_NAME_MAPPING[name]
     return name
 
+
 def loadDevices() -> Dict[str, HardwareWrapper]:
     global DEVICES
     if DEVICES is not None:

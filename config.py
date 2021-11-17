@@ -1,20 +1,29 @@
 import sys
 
 #region Configuration Port
-CONFIGURATION_PORT = 4233
+CONFIGURATION_PORT: int = 4233
 """
 Port for Communication with the configuration tool
 """
 #endregion
 
+#region Logging
+LOG_FORMAT: str = '[%(asctime)s] [%(levelname)s] %(message)s at %(pathname)s, line %(lineno)d, Function: %(funcName)s'
+"""
+Format String for the logger. 
+
+For available variables, see https://docs.python.org/3/library/logging.html#logrecord-attributes
+"""
+LOG_TO_CONSOLE: bool = True
+"""
+If True, logs to Stdout
+"""
+#endregion
+
 #region Plugins
-PLUGIN_DIRECTORY = "../VirtualStudioPlugins"
+PLUGIN_DIRECTORY = ["../VirtualStudioPlugins", "../libwsctrl", "../OBSWebsocketPlugin", "../DMXPlugin"]
 """
-Directory containing all cross-platform plugins
-"""
-PLUGIN_DIRECTORY_PLATFORM = ""
-"""
-Directory containing all platform specific plugins
+List of directories containing all plugins and libaries. Before a plugin, all libaries should be listed
 """
 #endregion
 
