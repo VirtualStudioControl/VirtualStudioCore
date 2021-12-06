@@ -35,6 +35,8 @@ def setConfiguration():
 
     for path in config.PLUGIN_DIRECTORY:
         sys.path.append(path)
+
+    for path in config.PLUGIN_DIRECTORY:
         loadModulesFromPath(path)
 
 
@@ -53,9 +55,10 @@ def loadAccounts():
 
 
 def run():
+    initialiseLogging()
+
     setConfiguration()
     try:
-        initialiseLogging()
         loadAccounts()
         loadActions()
         loadData()
