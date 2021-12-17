@@ -1,24 +1,39 @@
+from typing import Optional
+
 from virtualstudio.common.profile_manager import profilemanager
 from virtualstudio.common.profile_manager.profilemanager import getOrCreateProfileSet
 from virtualstudio.common.structs.action.imagebutton_action import ImageButtonAction
+from virtualstudio.common.structs.hardware.hardware_wrapper import HardwareWrapper
 from virtualstudio.core.devicemanager import device_manager
 from virtualstudio.core.devicemanager.device_manager import getDeviceByID, deviceNameToID
 
+STATE_INACTIVE = 0x00
+STATE_ACTIVE = 0x01
 
 class ImageButtonSwitchProfileAction(ImageButtonAction):
 
-    #region handlers
+    # region handlers
 
     def onLoad(self):
-        pass
+        self.hardware: Optional[HardwareWrapper] = None
+        self.deviceName: Optional[str] = None
 
     def onAppear(self):
-        self.ensureGUIParameter("combo_device", "itemTexts", device_manager.getLoadedDeviceNames())
+        self.setGUIParameter("combo_device", "itemTexts", device_manager.getLoadedDeviceNames())
         profileSet = profilemanager.getProfileSetFromFamily(device_manager.getLoadedDeviceNames()[0])
-        self.ensureGUIParameter("combo_profile", "itemTexts", profileSet.getProfileNames())
+        self.setGUIParameter("combo_profile", "itemTexts", profileSet.getProfileNames())
+
+        self.deviceName = self.getGUIParameter("combo_device", "currentText")
+        if self.deviceName is not None:
+            self.hardware = getDeviceByID(deviceNameToID(self.deviceName))
+            if self.hardware is not None:
+                self.hardware.addProfileChangedCallback(self.onHardwareProfileChanged)
+
+        self.updateProfileState()
 
     def onDisappear(self):
-        pass
+        if self.hardware is not None:
+            self.hardware.removeProfileChangedCallback(self.onHardwareProfileChanged)
 
     def onSettingsGUIAppear(self):
         pass
@@ -27,6 +42,16 @@ class ImageButtonSwitchProfileAction(ImageButtonAction):
         pass
 
     def onParamsChanged(self, parameters: dict):
+        devName = self.getGUIParameter("combo_device", "currentText")
+
+        if devName != self.deviceName:
+            if self.hardware is not None:
+                self.hardware.removeProfileChangedCallback(self.onHardwareProfileChanged)
+            self.deviceName = devName
+            self.hardware = getDeviceByID(deviceNameToID(self.deviceName))
+            if self.hardware is not None:
+                self.hardware.addProfileChangedCallback(self.onHardwareProfileChanged)
+
         profileSet = profilemanager.getProfileSetFromFamily(self.getGUIParameter("combo_device", "currentText"))
         if profileSet is not None:
             profileNames = profileSet.getProfileNames()
@@ -36,9 +61,28 @@ class ImageButtonSwitchProfileAction(ImageButtonAction):
 
             self.setGUIParameter("combo_profile", "itemTexts", profileNames)
 
-    #endregion
+        self.updateProfileState()
 
-    #region Hardware Event Handlers
+    # endregion
+
+    # region Callbacks
+
+    def onHardwareProfileChanged(self, profileName):
+        self.updateProfileState()
+
+    def updateProfileState(self):
+        profileName = self.getGUIParameter("combo_profile", "currentText")
+        if self.hardware is None:
+            self.setState(STATE_INACTIVE)
+            return
+        if self.hardware.currentProfile == profileName:
+            self.setState(STATE_ACTIVE)
+            return
+        self.setState(STATE_INACTIVE)
+
+    # endregion
+
+    # region Hardware Event Handlers
 
     def onKeyDown(self):
         pass
@@ -47,8 +91,7 @@ class ImageButtonSwitchProfileAction(ImageButtonAction):
         device = self.getGUIParameter("combo_device", "currentText")
         profile = self.getGUIParameter("combo_profile", "currentText")
 
-        hardware = getDeviceByID(deviceNameToID(device))
-        profileSet = getOrCreateProfileSet(hardware)
-        hardware.bindProfile(profileSet.getProfile(profile))
-
-    #endregion
+        self.hardware = getDeviceByID(deviceNameToID(device))
+        profileSet = getOrCreateProfileSet(self.hardware)
+        self.hardware.bindProfile(profileSet.getProfile(profile))
+    # endregion

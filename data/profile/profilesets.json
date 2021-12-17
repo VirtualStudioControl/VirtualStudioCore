@@ -123,9 +123,9 @@
                     "currentText": "Window Capture",
                     "itemTexts": [
                       "Window Capture",
-                      "Audio Output Capture",
+                      "Audio Input Capture",
                       "VD2",
-                      "Audio Input Capture"
+                      "Audio Output Capture"
                     ],
                     "enabled": true,
                     "visible": true,
@@ -192,10 +192,10 @@
                     "currentText": "Video Capture Device",
                     "itemTexts": [
                       "Video Capture Device",
-                      "Audio Output Capture",
-                      "Window Capture",
+                      "Audio Input Capture",
                       "VD2",
-                      "Audio Input Capture"
+                      "Window Capture",
+                      "Audio Output Capture"
                     ],
                     "enabled": true,
                     "visible": true,
@@ -453,34 +453,6 @@
                       "UK 4 [Universe 2, Channel 93]",
                       "UK 5 [Universe 2, Channel 101]",
                       "UK 6 [Universe 2, Channel 109]",
-                      "UK 7 [Universe 2, Channel 117]",
-                      "rgbaw-MH [Universe 1, Channel 120]",
-                      "rgbaw-MH [Universe 1, Channel 140]",
-                      "rgbaw-MH [Universe 2, Channel 140]",
-                      "ALL [Universe -1, Channel 1]",
-                      "Moving Heads [Universe -1, Channel 1]",
-                      "MH 1 [Universe 1, Channel 1]",
-                      "MH 2 [Universe 1, Channel 15]",
-                      "MH 3 [Universe 1, Channel 29]",
-                      "MH 4 [Universe 1, Channel 43]",
-                      "MH 5 [Universe 2, Channel 1]",
-                      "MH 6 [Universe 2, Channel 15]",
-                      "MH 7 [Universe 2, Channel 29]",
-                      "MH 8 [Universe 2, Channel 43]",
-                      "MH 9 [Universe 2, Channel 57]",
-                      "MH 10 [Universe 2, Channel 71]",
-                      "Bigs [Universe -1, Channel 1]",
-                      "BIG 1 [Universe 1, Channel 57]",
-                      "BIG 2 [Universe 1, Channel 65]",
-                      "BIG 3 [Universe 1, Channel 73]",
-                      "BIG 4 [Universe 1, Channel 81]",
-                      "UKings [Universe -1, Channel 1]",
-                      "UK 1 [Universe 1, Channel 89]",
-                      "UK 2 [Universe 1, Channel 97]",
-                      "UK 3 [Universe 2, Channel 85]",
-                      "UK 4 [Universe 2, Channel 93]",
-                      "UK 5 [Universe 2, Channel 101]",
-                      "UK 6 [Universe 2, Channel 109]",
                       "UK 7 [Universe 2, Channel 117]"
                     ],
                     "currentIndex": 3,
@@ -538,34 +510,6 @@
                   },
                   "device_combo": {
                     "itemTexts": [
-                      "rgbaw-MH [Universe 1, Channel 120]",
-                      "rgbaw-MH [Universe 1, Channel 140]",
-                      "rgbaw-MH [Universe 2, Channel 140]",
-                      "ALL [Universe -1, Channel 1]",
-                      "Moving Heads [Universe -1, Channel 1]",
-                      "MH 1 [Universe 1, Channel 1]",
-                      "MH 2 [Universe 1, Channel 15]",
-                      "MH 3 [Universe 1, Channel 29]",
-                      "MH 4 [Universe 1, Channel 43]",
-                      "MH 5 [Universe 2, Channel 1]",
-                      "MH 6 [Universe 2, Channel 15]",
-                      "MH 7 [Universe 2, Channel 29]",
-                      "MH 8 [Universe 2, Channel 43]",
-                      "MH 9 [Universe 2, Channel 57]",
-                      "MH 10 [Universe 2, Channel 71]",
-                      "Bigs [Universe -1, Channel 1]",
-                      "BIG 1 [Universe 1, Channel 57]",
-                      "BIG 2 [Universe 1, Channel 65]",
-                      "BIG 3 [Universe 1, Channel 73]",
-                      "BIG 4 [Universe 1, Channel 81]",
-                      "UKings [Universe -1, Channel 1]",
-                      "UK 1 [Universe 1, Channel 89]",
-                      "UK 2 [Universe 1, Channel 97]",
-                      "UK 3 [Universe 2, Channel 85]",
-                      "UK 4 [Universe 2, Channel 93]",
-                      "UK 5 [Universe 2, Channel 101]",
-                      "UK 6 [Universe 2, Channel 109]",
-                      "UK 7 [Universe 2, Channel 117]",
                       "rgbaw-MH [Universe 1, Channel 120]",
                       "rgbaw-MH [Universe 1, Channel 140]",
                       "rgbaw-MH [Universe 2, Channel 140]",
@@ -677,29 +621,7 @@
                       "UK 4 [Universe 2, Channel 93]",
                       "UK 5 [Universe 2, Channel 101]",
                       "UK 6 [Universe 2, Channel 109]",
-                      "UK 7 [Universe 2, Channel 117]",
-                      "rgbaw-MH [Universe 1, Channel 120]",
-                      "rgbaw-MH [Universe 1, Channel 140]",
-                      "rgbaw-MH [Universe 2, Channel 140]",
-                      "ALL [Universe -1, Channel 1]",
-                      "Moving Heads [Universe -1, Channel 1]",
-                      "MH 1 [Universe 1, Channel 1]",
-                      "MH 2 [Universe 1, Channel 15]",
-                      "MH 3 [Universe 1, Channel 29]",
-                      "MH 4 [Universe 1, Channel 43]",
-                      "MH 5 [Universe 2, Channel 1]",
-                      "MH 6 [Universe 2, Channel 15]",
-                      "MH 7 [Universe 2, Channel 29]",
-                      "MH 8 [Universe 2, Channel 43]",
-                      "MH 9 [Universe 2, Channel 57]",
-                      "MH 10 [Universe 2, Channel 71]",
-                      "Bigs [Universe -1, Channel 1]",
-                      "BIG 1 [Universe 1, Channel 57]",
-                      "BIG 2 [Universe 1, Channel 65]",
-                      "BIG 3 [Universe 1, Channel 73]",
-                      "BIG 4 [Universe 1, Channel 81]",
-                      "UKings [Universe -1, Channel 1]",
-                      "UK 1 [Universe 1, Channel 89]"
+                      "UK 7 [Universe 2, Channel 117]"
                     ],
                     "currentText": "ALL [Universe -1, Channel 1]",
                     "currentIndex": 3,
@@ -1579,10 +1501,10 @@
                     "currentText": "Camera_Front",
                     "itemTexts": [
                       "Camera_Front",
-                      "Audio Output Capture",
-                      "Window Capture",
+                      "Audio Input Capture",
                       "VD2",
-                      "Audio Input Capture"
+                      "Window Capture",
+                      "Audio Output Capture"
                     ],
                     "enabled": true,
                     "visible": true,
@@ -1639,10 +1561,10 @@
                     "currentText": "Camera_Front",
                     "itemTexts": [
                       "Camera_Front",
-                      "Audio Output Capture",
-                      "Window Capture",
+                      "Audio Input Capture",
                       "VD2",
-                      "Audio Input Capture"
+                      "Window Capture",
+                      "Audio Output Capture"
                     ],
                     "enabled": true,
                     "visible": true,
@@ -1972,10 +1894,10 @@
                     "currentText": "Video Capture Device",
                     "itemTexts": [
                       "Video Capture Device",
-                      "Audio Output Capture",
-                      "Window Capture",
+                      "Audio Input Capture",
                       "VD2",
-                      "Audio Input Capture"
+                      "Window Capture",
+                      "Audio Output Capture"
                     ],
                     "enabled": true,
                     "visible": true,
@@ -2144,9 +2066,9 @@
                     "currentText": "Window Capture",
                     "itemTexts": [
                       "Window Capture",
-                      "Audio Output Capture",
+                      "Audio Input Capture",
                       "VD2",
-                      "Audio Input Capture"
+                      "Audio Output Capture"
                     ],
                     "enabled": true,
                     "visible": true,
@@ -2286,9 +2208,9 @@
                     "currentText": "VD2",
                     "itemTexts": [
                       "VD2",
-                      "Audio Output Capture",
+                      "Audio Input Capture",
                       "Window Capture",
-                      "Audio Input Capture"
+                      "Audio Output Capture"
                     ],
                     "enabled": true,
                     "visible": true,
@@ -3140,7 +3062,7 @@
               "launcher": "eric.['OBS Websocket', 'Sources'].Source Visibility-(0, 0, 1)",
               "control": 0,
               "controlType": "IMAGE_BUTTON",
-              "currentState": 1,
+              "currentState": 0,
               "profileName": "Profile2",
               "deviceFamily": "Elgato Stream Deck XL",
               "parameters": {
@@ -3241,14 +3163,31 @@
                     "currentText": "Output 1",
                     "itemTexts": [
                       "Output 1",
-                      "Bild",
-                      "Ninja_Slides",
-                      "Ninja_Speaker1",
-                      "Ninja_Speaker2",
-                      "Dummy_Hintergrund",
-                      "Output 5",
-                      "Output 2",
-                      "Output 4"
+                      "TechDiff",
+                      "TechDiffImg",
+                      "PultLaptop",
+                      "InfoBeamer_R3S",
+                      "InfoBeamer_VOC",
+                      "Speaker1_Lokal",
+                      "Speaker2_Lokal",
+                      "Herald_Lokal",
+                      "HeraldNewsShow",
+                      "Nachtschleife",
+                      "Backupvideosrc",
+                      "RTMP_src",
+                      "Playout_1",
+                      "Playout_2",
+                      "Speaker_Slides",
+                      "Speaker1_Remote",
+                      "Speaker2_Remote",
+                      "Herald_Remote",
+                      "Slides_standin",
+                      "Speaker1_standin",
+                      "Speaker2_standin",
+                      "Herald_standin",
+                      "AUDIO_INPUT",
+                      "StudioTotale_Lokal",
+                      "Bauchbinde-infobeamer"
                     ],
                     "enabled": true,
                     "visible": true,
@@ -3379,14 +3318,31 @@
                     "currentText": "Ninja_Speaker1",
                     "itemTexts": [
                       "Ninja_Speaker1",
-                      "Bild",
-                      "Ninja_Slides",
-                      "Ninja_Speaker2",
-                      "Dummy_Hintergrund",
-                      "Output 5",
-                      "Output 2",
-                      "Output 4",
-                      "Output 1"
+                      "TechDiff",
+                      "TechDiffImg",
+                      "PultLaptop",
+                      "InfoBeamer_R3S",
+                      "InfoBeamer_VOC",
+                      "Speaker1_Lokal",
+                      "Speaker2_Lokal",
+                      "Herald_Lokal",
+                      "HeraldNewsShow",
+                      "Nachtschleife",
+                      "Backupvideosrc",
+                      "RTMP_src",
+                      "Playout_1",
+                      "Playout_2",
+                      "Speaker_Slides",
+                      "Speaker1_Remote",
+                      "Speaker2_Remote",
+                      "Herald_Remote",
+                      "Slides_standin",
+                      "Speaker1_standin",
+                      "Speaker2_standin",
+                      "Herald_standin",
+                      "AUDIO_INPUT",
+                      "StudioTotale_Lokal",
+                      "Bauchbinde-infobeamer"
                     ],
                     "enabled": true,
                     "visible": true,
@@ -3415,7 +3371,7 @@
               "launcher": "eric.['OBS Websocket', 'Sources'].Source Visibility-(0, 0, 1)",
               "control": 8,
               "controlType": "IMAGE_BUTTON",
-              "currentState": 1,
+              "currentState": 0,
               "profileName": "Profile2",
               "deviceFamily": "Elgato Stream Deck XL",
               "parameters": {
@@ -3516,14 +3472,31 @@
                     "currentText": "Output 2",
                     "itemTexts": [
                       "Output 2",
-                      "Bild",
-                      "Ninja_Slides",
-                      "Ninja_Speaker1",
-                      "Ninja_Speaker2",
-                      "Dummy_Hintergrund",
-                      "Output 5",
-                      "Output 4",
-                      "Output 1"
+                      "TechDiff",
+                      "TechDiffImg",
+                      "PultLaptop",
+                      "InfoBeamer_R3S",
+                      "InfoBeamer_VOC",
+                      "Speaker1_Lokal",
+                      "Speaker2_Lokal",
+                      "Herald_Lokal",
+                      "HeraldNewsShow",
+                      "Nachtschleife",
+                      "Backupvideosrc",
+                      "RTMP_src",
+                      "Playout_1",
+                      "Playout_2",
+                      "Speaker_Slides",
+                      "Speaker1_Remote",
+                      "Speaker2_Remote",
+                      "Herald_Remote",
+                      "Slides_standin",
+                      "Speaker1_standin",
+                      "Speaker2_standin",
+                      "Herald_standin",
+                      "AUDIO_INPUT",
+                      "StudioTotale_Lokal",
+                      "Bauchbinde-infobeamer"
                     ],
                     "enabled": true,
                     "visible": true,
@@ -3653,14 +3626,31 @@
                     "currentText": "Ninja_Speaker2",
                     "itemTexts": [
                       "Ninja_Speaker2",
-                      "Bild",
-                      "Ninja_Slides",
-                      "Ninja_Speaker1",
-                      "Dummy_Hintergrund",
-                      "Output 5",
-                      "Output 2",
-                      "Output 4",
-                      "Output 1"
+                      "TechDiff",
+                      "TechDiffImg",
+                      "PultLaptop",
+                      "InfoBeamer_R3S",
+                      "InfoBeamer_VOC",
+                      "Speaker1_Lokal",
+                      "Speaker2_Lokal",
+                      "Herald_Lokal",
+                      "HeraldNewsShow",
+                      "Nachtschleife",
+                      "Backupvideosrc",
+                      "RTMP_src",
+                      "Playout_1",
+                      "Playout_2",
+                      "Speaker_Slides",
+                      "Speaker1_Remote",
+                      "Speaker2_Remote",
+                      "Herald_Remote",
+                      "Slides_standin",
+                      "Speaker1_standin",
+                      "Speaker2_standin",
+                      "Herald_standin",
+                      "AUDIO_INPUT",
+                      "StudioTotale_Lokal",
+                      "Bauchbinde-infobeamer"
                     ],
                     "enabled": true,
                     "visible": true,
@@ -3689,7 +3679,7 @@
               "launcher": "eric.['OBS Websocket', 'Sources'].Source Visibility-(0, 0, 1)",
               "control": 16,
               "controlType": "IMAGE_BUTTON",
-              "currentState": 1,
+              "currentState": 0,
               "profileName": "Profile2",
               "deviceFamily": "Elgato Stream Deck XL",
               "parameters": {
@@ -3790,14 +3780,31 @@
                     "currentText": "Output 4",
                     "itemTexts": [
                       "Output 4",
-                      "Bild",
-                      "Ninja_Slides",
-                      "Ninja_Speaker1",
-                      "Ninja_Speaker2",
-                      "Dummy_Hintergrund",
-                      "Output 5",
-                      "Output 2",
-                      "Output 1"
+                      "TechDiff",
+                      "TechDiffImg",
+                      "PultLaptop",
+                      "InfoBeamer_R3S",
+                      "InfoBeamer_VOC",
+                      "Speaker1_Lokal",
+                      "Speaker2_Lokal",
+                      "Herald_Lokal",
+                      "HeraldNewsShow",
+                      "Nachtschleife",
+                      "Backupvideosrc",
+                      "RTMP_src",
+                      "Playout_1",
+                      "Playout_2",
+                      "Speaker_Slides",
+                      "Speaker1_Remote",
+                      "Speaker2_Remote",
+                      "Herald_Remote",
+                      "Slides_standin",
+                      "Speaker1_standin",
+                      "Speaker2_standin",
+                      "Herald_standin",
+                      "AUDIO_INPUT",
+                      "StudioTotale_Lokal",
+                      "Bauchbinde-infobeamer"
                     ],
                     "enabled": true,
                     "visible": true,
@@ -3850,14 +3857,31 @@
                     "currentText": "Ninja_Slides",
                     "itemTexts": [
                       "Ninja_Slides",
-                      "Bild",
-                      "Ninja_Speaker1",
-                      "Ninja_Speaker2",
-                      "Dummy_Hintergrund",
-                      "Output 5",
-                      "Output 2",
-                      "Output 4",
-                      "Output 1"
+                      "TechDiff",
+                      "TechDiffImg",
+                      "PultLaptop",
+                      "InfoBeamer_R3S",
+                      "InfoBeamer_VOC",
+                      "Speaker1_Lokal",
+                      "Speaker2_Lokal",
+                      "Herald_Lokal",
+                      "HeraldNewsShow",
+                      "Nachtschleife",
+                      "Backupvideosrc",
+                      "RTMP_src",
+                      "Playout_1",
+                      "Playout_2",
+                      "Speaker_Slides",
+                      "Speaker1_Remote",
+                      "Speaker2_Remote",
+                      "Herald_Remote",
+                      "Slides_standin",
+                      "Speaker1_standin",
+                      "Speaker2_standin",
+                      "Herald_standin",
+                      "AUDIO_INPUT",
+                      "StudioTotale_Lokal",
+                      "Bauchbinde-infobeamer"
                     ],
                     "enabled": true,
                     "visible": true,
@@ -4510,6 +4534,190 @@
                     "text": "...",
                     "currentFile": "B:/Repositorys/ChaosStudio/DMXRelayConfigurator/DMXFrames/WIR_BLACK.dmxframe",
                     "fileContent": "RE1YRlJBTUUCAAAAAQAAAAACAAAAAKnQAP8AAAAAAAAAAAAAqdAA/wAAAAAAAAAAAACp0AD/AAAAAAAAAAAAAKnQAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAAAAAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAgAAAACp0AD/AAAAAAAAAAAAAKnQAP8AAAAAAAAAAAAAqdAA/wAAAAAAAAAAAACp0AD/AAAAAAAAAAAAAKnQAP8AAAAAAAAAAAAAqdAA/wAAAAAAAAAA/wAAAAAAAAD/AAAAAAAAAP8AAAAAAAAA/wAAAAAAAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+                  }
+                }
+              }
+            },
+            {
+              "launcher": "eric.['Device'].Switch Profile-(0, 0, 1)",
+              "control": 24,
+              "controlType": "IMAGE_BUTTON",
+              "currentState": 0,
+              "profileName": "DMXPresets",
+              "deviceFamily": "Elgato Stream Deck XL",
+              "parameters": {
+                "states": [
+                  {
+                    "imagebutton": {
+                      "image": "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",
+                      "text": {
+                        "show": true,
+                        "text": "DEFAULT",
+                        "font": "MS Shell Dlg 2",
+                        "bold": false,
+                        "italics": false,
+                        "underline": false,
+                        "strikethrough": false,
+                        "fontsize": 16.0,
+                        "alignv": 1,
+                        "alignh": 1,
+                        "color_fg": "#ffffff"
+                      },
+                      "color_background": "#000000"
+                    },
+                    "button": {
+                      "ledstate": 0
+                    },
+                    "rotaryencoder": {
+                      "ledringmode": 0
+                    }
+                  },
+                  {
+                    "button": {
+                      "ledstate": 0
+                    },
+                    "imagebutton": {
+                      "text": {
+                        "show": true,
+                        "text": "DEFAULT",
+                        "font": "MS Shell Dlg 2",
+                        "bold": true,
+                        "italics": false,
+                        "underline": false,
+                        "strikethrough": false,
+                        "fontsize": 15.0,
+                        "alignv": 1,
+                        "alignh": 1,
+                        "color_fg": "#000000"
+                      },
+                      "color_background": "#ffaa00",
+                      "image": "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"
+                    },
+                    "rotaryencoder": {
+                      "ledringmode": 0
+                    }
+                  }
+                ],
+                "gui": {
+                  "combo_device": {
+                    "itemTexts": [
+                      "Behringer X-Touch Compact",
+                      "Elgato Stream Deck XL"
+                    ],
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "currentIndex": 0,
+                    "currentText": "Behringer X-Touch Compact",
+                    "editable": false,
+                    "duplicatesEnabled": false,
+                    "palceholderText": ""
+                  },
+                  "combo_profile": {
+                    "itemTexts": [
+                      "Default",
+                      "AlternateProfile"
+                    ],
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "currentIndex": 0,
+                    "currentText": "Default",
+                    "editable": false,
+                    "duplicatesEnabled": false,
+                    "palceholderText": ""
+                  }
+                }
+              }
+            },
+            {
+              "launcher": "eric.['Device'].Switch Profile-(0, 0, 1)",
+              "control": 25,
+              "controlType": "IMAGE_BUTTON",
+              "currentState": 0,
+              "profileName": "DMXPresets",
+              "deviceFamily": "Elgato Stream Deck XL",
+              "parameters": {
+                "states": [
+                  {
+                    "imagebutton": {
+                      "image": "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",
+                      "text": {
+                        "show": true,
+                        "text": "ALTERNATE",
+                        "font": "MS Shell Dlg 2",
+                        "bold": true,
+                        "italics": false,
+                        "underline": false,
+                        "strikethrough": false,
+                        "fontsize": 12.0,
+                        "alignv": 1,
+                        "alignh": 1,
+                        "color_fg": "#ffffff"
+                      },
+                      "color_background": "#000000"
+                    },
+                    "button": {
+                      "ledstate": 0
+                    },
+                    "rotaryencoder": {
+                      "ledringmode": 0
+                    }
+                  },
+                  {
+                    "button": {
+                      "ledstate": 0
+                    },
+                    "imagebutton": {
+                      "text": {
+                        "show": true,
+                        "text": "ALTERNATE",
+                        "font": "MS Shell Dlg 2",
+                        "bold": true,
+                        "italics": false,
+                        "underline": false,
+                        "strikethrough": false,
+                        "fontsize": 12.0,
+                        "alignv": 1,
+                        "alignh": 1,
+                        "color_fg": "#000000"
+                      },
+                      "color_background": "#ffaa00",
+                      "image": "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"
+                    },
+                    "rotaryencoder": {
+                      "ledringmode": 0
+                    }
+                  }
+                ],
+                "gui": {
+                  "combo_device": {
+                    "itemTexts": [
+                      "Behringer X-Touch Compact",
+                      "Elgato Stream Deck XL"
+                    ],
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "currentIndex": 0,
+                    "currentText": "Behringer X-Touch Compact",
+                    "editable": false,
+                    "duplicatesEnabled": false,
+                    "palceholderText": ""
+                  },
+                  "combo_profile": {
+                    "itemTexts": [
+                      "Default",
+                      "AlternateProfile"
+                    ],
+                    "currentIndex": 1,
+                    "currentText": "AlternateProfile",
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "editable": false,
+                    "duplicatesEnabled": false,
+                    "palceholderText": ""
                   }
                 }
               }

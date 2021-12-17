@@ -45,7 +45,7 @@ class SwitchProfileLauncher(ActionLauncher):
         return [CONTROL_TYPE_BUTTON, CONTROL_TYPE_IMAGE_BUTTON]
 
     def getActionStateCount(self, controlType: str) -> int:
-        return 1
+        return 2
 
     def getActionUI(self, controlType: str) -> Tuple[str, str]:
         return UI_TYPE_QTUI, \
