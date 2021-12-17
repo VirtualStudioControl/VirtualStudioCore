@@ -39,7 +39,6 @@ class MidiDeviceWrapper(HardwareWrapper):
         self.controls: List = [None] * len(controls)
 
         for c in controls:
-            logger.debug(c)
             if isinstance(c, Button):
                 self.appendButtonWrapper(c)
             elif isinstance(c, Fader):

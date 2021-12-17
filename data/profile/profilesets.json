@@ -123,8 +123,9 @@
                     "currentText": "Window Capture",
                     "itemTexts": [
                       "Window Capture",
+                      "Audio Output Capture",
                       "VD2",
-                      "Audio Output Capture"
+                      "Audio Input Capture"
                     ],
                     "enabled": true,
                     "visible": true,
@@ -191,9 +192,10 @@
                     "currentText": "Video Capture Device",
                     "itemTexts": [
                       "Video Capture Device",
-                      "VD2",
+                      "Audio Output Capture",
                       "Window Capture",
-                      "Audio Output Capture"
+                      "VD2",
+                      "Audio Input Capture"
                     ],
                     "enabled": true,
                     "visible": true,
@@ -394,6 +396,336 @@
                     }
                   }
                 ]
+              }
+            },
+            {
+              "launcher": "eric.['DMX'].Set Channel (Device)-(0, 0, 1)",
+              "control": 46,
+              "controlType": "FADER",
+              "currentState": 0,
+              "profileName": "Default",
+              "deviceFamily": "Behringer X-Touch Compact",
+              "parameters": {
+                "gui": {
+                  "additional_controls": {
+                    "currentIndex": 0
+                  },
+                  "account_combo": {
+                    "itemTexts": [
+                      "DMX Relay",
+                      "WIR Keller"
+                    ],
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "currentIndex": 1,
+                    "currentText": "WIR Keller",
+                    "editable": false,
+                    "duplicatesEnabled": false,
+                    "palceholderText": ""
+                  },
+                  "device_combo": {
+                    "itemTexts": [
+                      "rgbaw-MH [Universe 1, Channel 120]",
+                      "rgbaw-MH [Universe 1, Channel 140]",
+                      "rgbaw-MH [Universe 2, Channel 140]",
+                      "ALL [Universe -1, Channel 1]",
+                      "Moving Heads [Universe -1, Channel 1]",
+                      "MH 1 [Universe 1, Channel 1]",
+                      "MH 2 [Universe 1, Channel 15]",
+                      "MH 3 [Universe 1, Channel 29]",
+                      "MH 4 [Universe 1, Channel 43]",
+                      "MH 5 [Universe 2, Channel 1]",
+                      "MH 6 [Universe 2, Channel 15]",
+                      "MH 7 [Universe 2, Channel 29]",
+                      "MH 8 [Universe 2, Channel 43]",
+                      "MH 9 [Universe 2, Channel 57]",
+                      "MH 10 [Universe 2, Channel 71]",
+                      "Bigs [Universe -1, Channel 1]",
+                      "BIG 1 [Universe 1, Channel 57]",
+                      "BIG 2 [Universe 1, Channel 65]",
+                      "BIG 3 [Universe 1, Channel 73]",
+                      "BIG 4 [Universe 1, Channel 81]",
+                      "UKings [Universe -1, Channel 1]",
+                      "UK 1 [Universe 1, Channel 89]",
+                      "UK 2 [Universe 1, Channel 97]",
+                      "UK 3 [Universe 2, Channel 85]",
+                      "UK 4 [Universe 2, Channel 93]",
+                      "UK 5 [Universe 2, Channel 101]",
+                      "UK 6 [Universe 2, Channel 109]",
+                      "UK 7 [Universe 2, Channel 117]",
+                      "rgbaw-MH [Universe 1, Channel 120]",
+                      "rgbaw-MH [Universe 1, Channel 140]",
+                      "rgbaw-MH [Universe 2, Channel 140]",
+                      "ALL [Universe -1, Channel 1]",
+                      "Moving Heads [Universe -1, Channel 1]",
+                      "MH 1 [Universe 1, Channel 1]",
+                      "MH 2 [Universe 1, Channel 15]",
+                      "MH 3 [Universe 1, Channel 29]",
+                      "MH 4 [Universe 1, Channel 43]",
+                      "MH 5 [Universe 2, Channel 1]",
+                      "MH 6 [Universe 2, Channel 15]",
+                      "MH 7 [Universe 2, Channel 29]",
+                      "MH 8 [Universe 2, Channel 43]",
+                      "MH 9 [Universe 2, Channel 57]",
+                      "MH 10 [Universe 2, Channel 71]",
+                      "Bigs [Universe -1, Channel 1]",
+                      "BIG 1 [Universe 1, Channel 57]",
+                      "BIG 2 [Universe 1, Channel 65]",
+                      "BIG 3 [Universe 1, Channel 73]",
+                      "BIG 4 [Universe 1, Channel 81]",
+                      "UKings [Universe -1, Channel 1]",
+                      "UK 1 [Universe 1, Channel 89]",
+                      "UK 2 [Universe 1, Channel 97]",
+                      "UK 3 [Universe 2, Channel 85]",
+                      "UK 4 [Universe 2, Channel 93]",
+                      "UK 5 [Universe 2, Channel 101]",
+                      "UK 6 [Universe 2, Channel 109]",
+                      "UK 7 [Universe 2, Channel 117]"
+                    ],
+                    "currentIndex": 3,
+                    "currentText": "ALL [Universe -1, Channel 1]",
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "editable": false,
+                    "duplicatesEnabled": false,
+                    "palceholderText": ""
+                  },
+                  "channel_combo": {
+                    "itemTexts": [
+                      "RED",
+                      "GREEN",
+                      "BLUE"
+                    ],
+                    "currentText": "BLUE",
+                    "currentIndex": 2,
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "editable": false,
+                    "duplicatesEnabled": false,
+                    "palceholderText": ""
+                  }
+                }
+              }
+            },
+            {
+              "launcher": "eric.['DMX'].Set Channel (Device)-(0, 0, 1)",
+              "control": 45,
+              "controlType": "FADER",
+              "currentState": 0,
+              "profileName": "Default",
+              "deviceFamily": "Behringer X-Touch Compact",
+              "parameters": {
+                "gui": {
+                  "additional_controls": {
+                    "currentIndex": 0
+                  },
+                  "account_combo": {
+                    "itemTexts": [
+                      "DMX Relay",
+                      "WIR Keller"
+                    ],
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "currentIndex": 1,
+                    "currentText": "WIR Keller",
+                    "editable": false,
+                    "duplicatesEnabled": false,
+                    "palceholderText": ""
+                  },
+                  "device_combo": {
+                    "itemTexts": [
+                      "rgbaw-MH [Universe 1, Channel 120]",
+                      "rgbaw-MH [Universe 1, Channel 140]",
+                      "rgbaw-MH [Universe 2, Channel 140]",
+                      "ALL [Universe -1, Channel 1]",
+                      "Moving Heads [Universe -1, Channel 1]",
+                      "MH 1 [Universe 1, Channel 1]",
+                      "MH 2 [Universe 1, Channel 15]",
+                      "MH 3 [Universe 1, Channel 29]",
+                      "MH 4 [Universe 1, Channel 43]",
+                      "MH 5 [Universe 2, Channel 1]",
+                      "MH 6 [Universe 2, Channel 15]",
+                      "MH 7 [Universe 2, Channel 29]",
+                      "MH 8 [Universe 2, Channel 43]",
+                      "MH 9 [Universe 2, Channel 57]",
+                      "MH 10 [Universe 2, Channel 71]",
+                      "Bigs [Universe -1, Channel 1]",
+                      "BIG 1 [Universe 1, Channel 57]",
+                      "BIG 2 [Universe 1, Channel 65]",
+                      "BIG 3 [Universe 1, Channel 73]",
+                      "BIG 4 [Universe 1, Channel 81]",
+                      "UKings [Universe -1, Channel 1]",
+                      "UK 1 [Universe 1, Channel 89]",
+                      "UK 2 [Universe 1, Channel 97]",
+                      "UK 3 [Universe 2, Channel 85]",
+                      "UK 4 [Universe 2, Channel 93]",
+                      "UK 5 [Universe 2, Channel 101]",
+                      "UK 6 [Universe 2, Channel 109]",
+                      "UK 7 [Universe 2, Channel 117]",
+                      "rgbaw-MH [Universe 1, Channel 120]",
+                      "rgbaw-MH [Universe 1, Channel 140]",
+                      "rgbaw-MH [Universe 2, Channel 140]",
+                      "ALL [Universe -1, Channel 1]",
+                      "Moving Heads [Universe -1, Channel 1]",
+                      "MH 1 [Universe 1, Channel 1]",
+                      "MH 2 [Universe 1, Channel 15]",
+                      "MH 3 [Universe 1, Channel 29]",
+                      "MH 4 [Universe 1, Channel 43]",
+                      "MH 5 [Universe 2, Channel 1]",
+                      "MH 6 [Universe 2, Channel 15]",
+                      "MH 7 [Universe 2, Channel 29]",
+                      "MH 8 [Universe 2, Channel 43]",
+                      "MH 9 [Universe 2, Channel 57]",
+                      "MH 10 [Universe 2, Channel 71]",
+                      "Bigs [Universe -1, Channel 1]",
+                      "BIG 1 [Universe 1, Channel 57]",
+                      "BIG 2 [Universe 1, Channel 65]",
+                      "BIG 3 [Universe 1, Channel 73]",
+                      "BIG 4 [Universe 1, Channel 81]",
+                      "UKings [Universe -1, Channel 1]",
+                      "UK 1 [Universe 1, Channel 89]",
+                      "UK 2 [Universe 1, Channel 97]",
+                      "UK 3 [Universe 2, Channel 85]",
+                      "UK 4 [Universe 2, Channel 93]",
+                      "UK 5 [Universe 2, Channel 101]",
+                      "UK 6 [Universe 2, Channel 109]",
+                      "UK 7 [Universe 2, Channel 117]"
+                    ],
+                    "currentText": "ALL [Universe -1, Channel 1]",
+                    "currentIndex": 3,
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "editable": false,
+                    "duplicatesEnabled": false,
+                    "palceholderText": ""
+                  },
+                  "channel_combo": {
+                    "itemTexts": [
+                      "RED",
+                      "GREEN",
+                      "BLUE"
+                    ],
+                    "currentText": "GREEN",
+                    "currentIndex": 1,
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "editable": false,
+                    "duplicatesEnabled": false,
+                    "palceholderText": ""
+                  }
+                }
+              }
+            },
+            {
+              "launcher": "eric.['DMX'].Set Channel (Device)-(0, 0, 1)",
+              "control": 44,
+              "controlType": "FADER",
+              "currentState": 0,
+              "profileName": "Default",
+              "deviceFamily": "Behringer X-Touch Compact",
+              "parameters": {
+                "gui": {
+                  "additional_controls": {
+                    "currentIndex": 0
+                  },
+                  "account_combo": {
+                    "itemTexts": [
+                      "DMX Relay",
+                      "WIR Keller"
+                    ],
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "currentIndex": 1,
+                    "currentText": "WIR Keller",
+                    "editable": false,
+                    "duplicatesEnabled": false,
+                    "palceholderText": ""
+                  },
+                  "device_combo": {
+                    "itemTexts": [
+                      "rgbaw-MH [Universe 1, Channel 120]",
+                      "rgbaw-MH [Universe 1, Channel 140]",
+                      "rgbaw-MH [Universe 2, Channel 140]",
+                      "ALL [Universe -1, Channel 1]",
+                      "Moving Heads [Universe -1, Channel 1]",
+                      "MH 1 [Universe 1, Channel 1]",
+                      "MH 2 [Universe 1, Channel 15]",
+                      "MH 3 [Universe 1, Channel 29]",
+                      "MH 4 [Universe 1, Channel 43]",
+                      "MH 5 [Universe 2, Channel 1]",
+                      "MH 6 [Universe 2, Channel 15]",
+                      "MH 7 [Universe 2, Channel 29]",
+                      "MH 8 [Universe 2, Channel 43]",
+                      "MH 9 [Universe 2, Channel 57]",
+                      "MH 10 [Universe 2, Channel 71]",
+                      "Bigs [Universe -1, Channel 1]",
+                      "BIG 1 [Universe 1, Channel 57]",
+                      "BIG 2 [Universe 1, Channel 65]",
+                      "BIG 3 [Universe 1, Channel 73]",
+                      "BIG 4 [Universe 1, Channel 81]",
+                      "UKings [Universe -1, Channel 1]",
+                      "UK 1 [Universe 1, Channel 89]",
+                      "UK 2 [Universe 1, Channel 97]",
+                      "UK 3 [Universe 2, Channel 85]",
+                      "UK 4 [Universe 2, Channel 93]",
+                      "UK 5 [Universe 2, Channel 101]",
+                      "UK 6 [Universe 2, Channel 109]",
+                      "UK 7 [Universe 2, Channel 117]",
+                      "rgbaw-MH [Universe 1, Channel 120]",
+                      "rgbaw-MH [Universe 1, Channel 140]",
+                      "rgbaw-MH [Universe 2, Channel 140]",
+                      "ALL [Universe -1, Channel 1]",
+                      "Moving Heads [Universe -1, Channel 1]",
+                      "MH 1 [Universe 1, Channel 1]",
+                      "MH 2 [Universe 1, Channel 15]",
+                      "MH 3 [Universe 1, Channel 29]",
+                      "MH 4 [Universe 1, Channel 43]",
+                      "MH 5 [Universe 2, Channel 1]",
+                      "MH 6 [Universe 2, Channel 15]",
+                      "MH 7 [Universe 2, Channel 29]",
+                      "MH 8 [Universe 2, Channel 43]",
+                      "MH 9 [Universe 2, Channel 57]",
+                      "MH 10 [Universe 2, Channel 71]",
+                      "Bigs [Universe -1, Channel 1]",
+                      "BIG 1 [Universe 1, Channel 57]",
+                      "BIG 2 [Universe 1, Channel 65]",
+                      "BIG 3 [Universe 1, Channel 73]",
+                      "BIG 4 [Universe 1, Channel 81]",
+                      "UKings [Universe -1, Channel 1]",
+                      "UK 1 [Universe 1, Channel 89]"
+                    ],
+                    "currentText": "ALL [Universe -1, Channel 1]",
+                    "currentIndex": 3,
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "editable": false,
+                    "duplicatesEnabled": false,
+                    "palceholderText": ""
+                  },
+                  "channel_combo": {
+                    "itemTexts": [
+                      "RED",
+                      "GREEN",
+                      "BLUE"
+                    ],
+                    "currentText": "RED",
+                    "currentIndex": 0,
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "editable": false,
+                    "duplicatesEnabled": false,
+                    "palceholderText": ""
+                  }
+                }
               }
             }
           ]
@@ -1247,9 +1579,10 @@
                     "currentText": "Camera_Front",
                     "itemTexts": [
                       "Camera_Front",
-                      "VD2",
+                      "Audio Output Capture",
                       "Window Capture",
-                      "Audio Output Capture"
+                      "VD2",
+                      "Audio Input Capture"
                     ],
                     "enabled": true,
                     "visible": true,
@@ -1306,9 +1639,10 @@
                     "currentText": "Camera_Front",
                     "itemTexts": [
                       "Camera_Front",
-                      "VD2",
+                      "Audio Output Capture",
                       "Window Capture",
-                      "Audio Output Capture"
+                      "VD2",
+                      "Audio Input Capture"
                     ],
                     "enabled": true,
                     "visible": true,
@@ -1638,9 +1972,10 @@
                     "currentText": "Video Capture Device",
                     "itemTexts": [
                       "Video Capture Device",
-                      "VD2",
+                      "Audio Output Capture",
                       "Window Capture",
-                      "Audio Output Capture"
+                      "VD2",
+                      "Audio Input Capture"
                     ],
                     "enabled": true,
                     "visible": true,
@@ -1809,8 +2144,9 @@
                     "currentText": "Window Capture",
                     "itemTexts": [
                       "Window Capture",
+                      "Audio Output Capture",
                       "VD2",
-                      "Audio Output Capture"
+                      "Audio Input Capture"
                     ],
                     "enabled": true,
                     "visible": true,
@@ -1849,7 +2185,7 @@
               "launcher": "eric.['OBS Websocket', 'Sources'].Source Visibility-(0, 0, 1)",
               "control": 27,
               "controlType": "IMAGE_BUTTON",
-              "currentState": 1,
+              "currentState": 0,
               "profileName": "Default",
               "deviceFamily": "Elgato Stream Deck XL",
               "parameters": {
@@ -1946,12 +2282,13 @@
                     "palceholderText": ""
                   },
                   "sourcename_combo": {
-                    "currentIndex": 1,
+                    "currentIndex": 0,
                     "currentText": "VD2",
                     "itemTexts": [
-                      "Audio Output Capture",
                       "VD2",
-                      "Window Capture"
+                      "Audio Output Capture",
+                      "Window Capture",
+                      "Audio Input Capture"
                     ],
                     "enabled": true,
                     "visible": true,
@@ -1975,6 +2312,753 @@
                   }
                 }
               }
+            },
+            {
+              "launcher": "eric.['OBS Websocket', 'General'].Trigger Hotkey-(0, 0, 1)",
+              "control": 3,
+              "controlType": "IMAGE_BUTTON",
+              "currentState": 0,
+              "profileName": "Default",
+              "deviceFamily": "Elgato Stream Deck XL",
+              "parameters": {
+                "states": [
+                  {
+                    "imagebutton": {
+                      "image": "/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABgAGADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDj6KKK/WD7kKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9k=",
+                      "text": {
+                        "show": true,
+                        "text": "",
+                        "font": "MS Shell Dlg 2",
+                        "bold": false,
+                        "italics": false,
+                        "underline": false,
+                        "strikethrough": false,
+                        "fontsize": 8,
+                        "alignv": 1,
+                        "alignh": 1,
+                        "color_fg": "#ffffff"
+                      },
+                      "color_background": "#aa00ff"
+                    },
+                    "button": {
+                      "ledstate": 0
+                    },
+                    "rotaryencoder": {
+                      "ledringmode": 0
+                    }
+                  }
+                ],
+                "gui": {
+                  "account_combo": {
+                    "itemTexts": [
+                      "Local Host",
+                      "WIR Keller OBS"
+                    ],
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "currentIndex": 0,
+                    "currentText": "Local Host",
+                    "editable": false,
+                    "duplicatesEnabled": false,
+                    "palceholderText": ""
+                  },
+                  "keyNameCombo": {
+                    "itemTexts": [
+                      "NONE",
+                      "RETURN",
+                      "ENTER",
+                      "ESCAPE",
+                      "TAB",
+                      "BACKTAB",
+                      "BACKSPACE",
+                      "INSERT",
+                      "DELETE",
+                      "PAUSE",
+                      "PRINT",
+                      "SYSREQ",
+                      "CLEAR",
+                      "HOME",
+                      "END",
+                      "LEFT",
+                      "UP",
+                      "RIGHT",
+                      "DOWN",
+                      "PAGEUP",
+                      "PAGEDOWN",
+                      "SHIFT",
+                      "CONTROL",
+                      "META",
+                      "ALT",
+                      "ALTGR",
+                      "CAPSLOCK",
+                      "NUMLOCK",
+                      "SCROLLLOCK",
+                      "F1",
+                      "F2",
+                      "F3",
+                      "F4",
+                      "F5",
+                      "F6",
+                      "F7",
+                      "F8",
+                      "F9",
+                      "F10",
+                      "F11",
+                      "F12",
+                      "F13",
+                      "F14",
+                      "F15",
+                      "F16",
+                      "F17",
+                      "F18",
+                      "F19",
+                      "F20",
+                      "F21",
+                      "F22",
+                      "F23",
+                      "F24",
+                      "F25",
+                      "F26",
+                      "F27",
+                      "F28",
+                      "F29",
+                      "F30",
+                      "F31",
+                      "F32",
+                      "F33",
+                      "F34",
+                      "F35",
+                      "MENU",
+                      "HYPER L",
+                      "HYPER R",
+                      "HELP",
+                      "DIRECTION L",
+                      "DIRECTION R",
+                      "SPACE",
+                      "EXCLAM",
+                      "QUOTEDBL",
+                      "NUMBERSIGN",
+                      "DOLLAR",
+                      "PERCENT",
+                      "AMPERSAND",
+                      "APOSTROPHE",
+                      "PARENLEFT",
+                      "PARENRIGHT",
+                      "ASTERISK",
+                      "PLUS",
+                      "COMMA",
+                      "MINUS",
+                      "PERIOD",
+                      "SLASH",
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "5",
+                      "6",
+                      "7",
+                      "8",
+                      "9",
+                      "NUMEQUAL",
+                      "NUMASTERISK",
+                      "NUMPLUS",
+                      "NUMCOMMA",
+                      "NUMMINUS",
+                      "NUMPERIOD",
+                      "NUMSLASH",
+                      "NUM0",
+                      "NUM1",
+                      "NUM2",
+                      "NUM3",
+                      "NUM4",
+                      "NUM5",
+                      "NUM6",
+                      "NUM7",
+                      "NUM8",
+                      "NUM9",
+                      "COLON",
+                      "SEMICOLON",
+                      "QUOTE",
+                      "LESS",
+                      "EQUAL",
+                      "GREATER",
+                      "QUESTION",
+                      "AT",
+                      "A",
+                      "B",
+                      "C",
+                      "D",
+                      "E",
+                      "F",
+                      "G",
+                      "H",
+                      "I",
+                      "J",
+                      "K",
+                      "L",
+                      "M",
+                      "N",
+                      "O",
+                      "P",
+                      "Q",
+                      "R",
+                      "S",
+                      "T",
+                      "U",
+                      "V",
+                      "W",
+                      "X",
+                      "Y",
+                      "Z",
+                      "BRACKETLEFT",
+                      "BACKSLASH",
+                      "BRACKETRIGHT",
+                      "ASCIICIRCUM",
+                      "UNDERSCORE",
+                      "QUOTELEFT",
+                      "BRACELEFT",
+                      "BAR",
+                      "BRACERIGHT",
+                      "ASCIITILDE",
+                      "NOBREAKSPACE",
+                      "EXCLAMDOWN",
+                      "CENT",
+                      "STERLING",
+                      "CURRENCY",
+                      "YEN",
+                      "BROKENBAR",
+                      "SECTION",
+                      "DIAERESIS",
+                      "COPYRIGHT",
+                      "ORDFEMININE",
+                      "GUILLEMOTLEFT",
+                      "NOTSIGN",
+                      "HYPHEN",
+                      "REGISTERED",
+                      "MACRON",
+                      "DEGREE",
+                      "PLUSMINUS",
+                      "TWOSUPERIOR",
+                      "THREESUPERIOR",
+                      "ACUTE",
+                      "MU",
+                      "PARAGRAPH",
+                      "PERIODCENTERED",
+                      "CEDILLA",
+                      "ONESUPERIOR",
+                      "MASCULINE",
+                      "GUILLEMOTRIGHT",
+                      "ONEQUARTER",
+                      "ONEHALF",
+                      "THREEQUARTERS",
+                      "QUESTIONDOWN",
+                      "AGRAVE",
+                      "AACUTE",
+                      "ACIRCUMFLEX",
+                      "ATILDE",
+                      "ADIAERESIS",
+                      "ARING",
+                      "AE",
+                      "CCEDILLA",
+                      "EGRAVE",
+                      "EACUTE",
+                      "ECIRCUMFLEX",
+                      "EDIAERESIS",
+                      "IGRAVE",
+                      "IACUTE",
+                      "ICIRCUMFLEX",
+                      "IDIAERESIS",
+                      "ETH",
+                      "NTILDE",
+                      "OGRAVE",
+                      "OACUTE",
+                      "OCIRCUMFLEX",
+                      "OTILDE",
+                      "ODIAERESIS",
+                      "MULTIPLY",
+                      "OOBLIQUE",
+                      "UGRAVE",
+                      "UACUTE",
+                      "UCIRCUMFLEX",
+                      "UDIAERESIS",
+                      "YACUTE",
+                      "THORN",
+                      "SSHARP",
+                      "DIVISION",
+                      "YDIAERESIS",
+                      "MULTI KEY",
+                      "CODEINPUT",
+                      "SINGLECANDIDATE",
+                      "MULTIPLECANDIDATE",
+                      "PREVIOUSCANDIDATE",
+                      "MODE_SWITCH",
+                      "KANJI",
+                      "MUHENKAN",
+                      "HENKAN",
+                      "ROMAJI",
+                      "HIRAGANA",
+                      "KATAKANA",
+                      "HIRAGANA KATAKANA",
+                      "ZENKAKU",
+                      "HANKAKU",
+                      "ZENKAKU HANKAKU",
+                      "TOUROKU",
+                      "MASSYO",
+                      "KANA LOCK",
+                      "KANA SHIFT",
+                      "EISU SHIFT",
+                      "EISU TOGGLE",
+                      "HANGUL",
+                      "HANGUL START",
+                      "HANGUL END",
+                      "HANGUL HANJA",
+                      "HANGUL JAMO",
+                      "HANGUL ROMAJA",
+                      "HANGUL JEONJA",
+                      "HANGUL BANJA",
+                      "HANGUL PREHANJA",
+                      "HANGUL POSTHANJA",
+                      "HANGUL SPECIAL",
+                      "DEAD GRAVE",
+                      "DEAD ACUTE",
+                      "DEAD CIRCUMFLEX",
+                      "DEAD TILDE",
+                      "DEAD MACRON",
+                      "DEAD BREVE",
+                      "DEAD ABOVEDOT",
+                      "DEAD DIAERESIS",
+                      "DEAD ABOVERING",
+                      "DEAD DOUBLEACUTE",
+                      "DEAD CARON",
+                      "DEAD CEDILLA",
+                      "DEAD OGONEK",
+                      "DEAD IOTA",
+                      "DEAD VOICED SOUND",
+                      "DEAD SEMIVOICED SOUND",
+                      "DEAD BELOWDOT",
+                      "DEAD HOOK",
+                      "DEAD HORN",
+                      "BACK",
+                      "FORWARD",
+                      "STOP",
+                      "REFRESH",
+                      "VOLUMEDOWN",
+                      "VOLUMEMUTE",
+                      "VOLUMEUP",
+                      "BASSBOOST",
+                      "BASSUP",
+                      "BASSDOWN",
+                      "TREBLEUP",
+                      "TREBLEDOWN",
+                      "MEDIAPLAY",
+                      "MEDIASTOP",
+                      "MEDIAPREVIOUS",
+                      "MEDIANEXT",
+                      "MEDIARECORD",
+                      "MEDIAPAUSE",
+                      "MEDIATOGGLEPLAYPAUSE",
+                      "HOMEPAGE",
+                      "FAVORITES",
+                      "SEARCH",
+                      "STANDBY",
+                      "OPENURL",
+                      "LAUNCHMAIL",
+                      "LAUNCHMEDIA",
+                      "LAUNCH0",
+                      "LAUNCH1",
+                      "LAUNCH2",
+                      "LAUNCH3",
+                      "LAUNCH4",
+                      "LAUNCH5",
+                      "LAUNCH6",
+                      "LAUNCH7",
+                      "LAUNCH8",
+                      "LAUNCH9",
+                      "LAUNCHA",
+                      "LAUNCHB",
+                      "LAUNCHC",
+                      "LAUNCHD",
+                      "LAUNCHE",
+                      "LAUNCHF",
+                      "LAUNCHG",
+                      "LAUNCHH",
+                      "MONBRIGHTNESSUP",
+                      "MONBRIGHTNESSDOWN",
+                      "KEYBOARDLIGHTONOFF",
+                      "KEYBOARDBRIGHTNESSUP",
+                      "KEYBOARDBRIGHTNESSDOWN",
+                      "POWEROFF",
+                      "WAKEUP",
+                      "EJECT",
+                      "SCREENSAVER",
+                      "WWW",
+                      "MEMO",
+                      "LIGHTBULB",
+                      "SHOP",
+                      "HISTORY",
+                      "ADDFAVORITE",
+                      "HOTLINKS",
+                      "BRIGHTNESSADJUST",
+                      "FINANCE",
+                      "COMMUNITY",
+                      "AUDIOREWIND",
+                      "BACKFORWARD",
+                      "APPLICATIONLEFT",
+                      "APPLICATIONRIGHT",
+                      "BOOK",
+                      "CD",
+                      "CALCULATOR",
+                      "TODOLIST",
+                      "CLEARGRAB",
+                      "CLOSE",
+                      "COPY",
+                      "CUT",
+                      "DISPLAY",
+                      "DOS",
+                      "DOCUMENTS",
+                      "EXCEL",
+                      "EXPLORER",
+                      "GAME",
+                      "GO",
+                      "ITOUCH",
+                      "LOGOFF",
+                      "MARKET",
+                      "MEETING",
+                      "MENUKB",
+                      "MENUPB",
+                      "MYSITES",
+                      "NEWS",
+                      "OFFICEHOME",
+                      "OPTION",
+                      "PASTE",
+                      "PHONE",
+                      "CALENDAR",
+                      "REPLY",
+                      "RELOAD",
+                      "ROTATEWINDOWS",
+                      "ROTATIONPB",
+                      "ROTATIONKB",
+                      "SAVE",
+                      "SEND",
+                      "SPELL",
+                      "SPLITSCREEN",
+                      "SUPPORT",
+                      "TASKPANE",
+                      "TERMINAL",
+                      "TOOLS",
+                      "TRAVEL",
+                      "VIDEO",
+                      "WORD",
+                      "XFER",
+                      "ZOOMIN",
+                      "ZOOMOUT",
+                      "AWAY",
+                      "MESSENGER",
+                      "WEBCAM",
+                      "MAILFORWARD",
+                      "PICTURES",
+                      "MUSIC",
+                      "BATTERY",
+                      "BLUETOOTH",
+                      "WLAN",
+                      "UWB",
+                      "AUDIOFORWARD",
+                      "AUDIOREPEAT",
+                      "AUDIORANDOMPLAY",
+                      "SUBTITLE",
+                      "AUDIOCYCLETRACK",
+                      "TIME",
+                      "HIBERNATE",
+                      "VIEW",
+                      "TOPMENU",
+                      "POWERDOWN",
+                      "SUSPEND",
+                      "CONTRASTADJUST",
+                      "MEDIALAST",
+                      "CALL",
+                      "CAMERA",
+                      "CAMERAFOCUS",
+                      "CONTEXT1",
+                      "CONTEXT2",
+                      "CONTEXT3",
+                      "CONTEXT4",
+                      "FLIP",
+                      "HANGUP",
+                      "NO",
+                      "SELECT",
+                      "YES",
+                      "TOGGLECALLHANGUP",
+                      "VOICEDIAL",
+                      "LASTNUMBERREDIAL",
+                      "EXECUTE",
+                      "PRINTER",
+                      "PLAY",
+                      "SLEEP",
+                      "ZOOM",
+                      "CANCEL",
+                      "MOUSE1",
+                      "MOUSE2",
+                      "MOUSE3",
+                      "MOUSE4",
+                      "MOUSE5",
+                      "MOUSE6",
+                      "MOUSE7",
+                      "MOUSE8",
+                      "MOUSE9",
+                      "MOUSE10",
+                      "MOUSE11",
+                      "MOUSE12",
+                      "MOUSE13",
+                      "MOUSE14",
+                      "MOUSE15",
+                      "MOUSE16",
+                      "MOUSE17",
+                      "MOUSE18",
+                      "MOUSE19",
+                      "MOUSE20",
+                      "MOUSE21",
+                      "MOUSE22",
+                      "MOUSE23",
+                      "MOUSE24",
+                      "MOUSE25",
+                      "MOUSE26",
+                      "MOUSE27",
+                      "MOUSE28",
+                      "MOUSE29",
+                      "BACKSLASH RT102",
+                      "OPEN",
+                      "FIND",
+                      "REDO",
+                      "UNDO",
+                      "FRONT",
+                      "PROPS",
+                      "VK CANCEL",
+                      "0x07",
+                      "0x0A",
+                      "0x0B",
+                      "0x0E",
+                      "0x0F",
+                      "0x16",
+                      "VK JUNJA",
+                      "VK FINAL",
+                      "0x1A",
+                      "VK ACCEPT",
+                      "VK MODECHANGE",
+                      "VK SELECT",
+                      "VK PRINT",
+                      "VK EXECUTE",
+                      "VK HELP",
+                      "0x30",
+                      "0x31",
+                      "0x32",
+                      "0x33",
+                      "0x34",
+                      "0x35",
+                      "0x36",
+                      "0x37",
+                      "0x38",
+                      "0x39",
+                      "0x3A",
+                      "0x3B",
+                      "0x3C",
+                      "0x3D",
+                      "0x3E",
+                      "0x3F",
+                      "0x40",
+                      "0x41",
+                      "0x42",
+                      "0x43",
+                      "0x44",
+                      "0x45",
+                      "0x46",
+                      "0x47",
+                      "0x48",
+                      "0x49",
+                      "0x4A",
+                      "0x4B",
+                      "0x4C",
+                      "0x4D",
+                      "0x4E",
+                      "0x4F",
+                      "0x50",
+                      "0x51",
+                      "0x52",
+                      "0x53",
+                      "0x54",
+                      "0x55",
+                      "0x56",
+                      "0x57",
+                      "0x58",
+                      "0x59",
+                      "0x5A",
+                      "VK LWIN",
+                      "VK RWIN",
+                      "VK APPS",
+                      "0x5E",
+                      "VK SLEEP",
+                      "VK SEPARATOR",
+                      "0x88",
+                      "0x89",
+                      "0x8A",
+                      "0x8B",
+                      "0x8C",
+                      "0x8D",
+                      "0x8E",
+                      "0x8F",
+                      "VK OEM FJ JISHO",
+                      "VK OEM FJ LOYA",
+                      "VK OEM FJ ROYA",
+                      "0x97",
+                      "0x98",
+                      "0x99",
+                      "0x9A",
+                      "0x9B",
+                      "0x9C",
+                      "0x9D",
+                      "0x9E",
+                      "0x9F",
+                      "VK LSHIFT",
+                      "VK RSHIFT",
+                      "VK LCONTROL",
+                      "VK RCONTROL",
+                      "VK LMENU",
+                      "VK RMENU",
+                      "VK BROWSER BACK",
+                      "VK BROWSER FORWARD",
+                      "VK BROWSER REFRESH",
+                      "VK BROWSER STOP",
+                      "VK BROWSER SEARCH",
+                      "VK BROWSER FAVORITES",
+                      "VK BROWSER HOME",
+                      "VK VOLUME MUTE",
+                      "VK VOLUME DOWN",
+                      "VK VOLUME UP",
+                      "VK MEDIA NEXT TRACK",
+                      "VK MEDIA PREV TRACK",
+                      "VK MEDIA STOP",
+                      "VK MEDIA PLAY PAUSE",
+                      "VK LAUNCH MAIL",
+                      "VK LAUNCH MEDIA SELECT",
+                      "VK LAUNCH APP1",
+                      "VK LAUNCH APP2",
+                      "0xB8",
+                      "0xB9",
+                      "0xC1",
+                      "0xC2",
+                      "0xC3",
+                      "0xC4",
+                      "0xC5",
+                      "0xC6",
+                      "0xC7",
+                      "0xC8",
+                      "0xC9",
+                      "0xCA",
+                      "0xCB",
+                      "0xCC",
+                      "0xCD",
+                      "0xCE",
+                      "0xCF",
+                      "0xD0",
+                      "0xD1",
+                      "0xD2",
+                      "0xD3",
+                      "0xD4",
+                      "0xD5",
+                      "0xD6",
+                      "0xD7",
+                      "0xD8",
+                      "0xD9",
+                      "0xDA",
+                      "VK OEM 8",
+                      "0xE0",
+                      "VK OEM AX",
+                      "VK ICO HELP",
+                      "VK ICO 00",
+                      "VK PROCESSKEY",
+                      "VK ICO CLEAR",
+                      "VK PACKET",
+                      "0xE8",
+                      "VK OEM RESET",
+                      "VK OEM JUMP",
+                      "VK OEM PA1",
+                      "VK OEM PA2",
+                      "VK OEM PA3",
+                      "VK OEM WSCTRL",
+                      "VK OEM CUSEL",
+                      "VK OEM ATTN",
+                      "VK OEM FINISH",
+                      "VK OEM_COPY",
+                      "VK OEM_AUTO",
+                      "VK OEM_ENLW",
+                      "VK ATTN",
+                      "VK CRSEL",
+                      "VK EXSEL",
+                      "VK EREOF",
+                      "VK PLAY",
+                      "VK ZOOM",
+                      "VK NONAME",
+                      "VK PA1",
+                      "VK OEM CLEAR"
+                    ],
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "currentIndex": 29,
+                    "currentText": "F1",
+                    "editable": false,
+                    "duplicatesEnabled": false,
+                    "palceholderText": ""
+                  },
+                  "shortcut_type_select": {
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "currentIndex": 0
+                  },
+                  "checkBox": {
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "checkable": true,
+                    "checked": false,
+                    "text": "Shift",
+                    "checkState": 0,
+                    "tristate": false
+                  },
+                  "checkBox_4": {
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "checkable": true,
+                    "checked": false,
+                    "text": "Command",
+                    "checkState": 0,
+                    "tristate": false
+                  },
+                  "checkBox_2": {
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "checkable": true,
+                    "checked": false,
+                    "text": "Alt",
+                    "checkState": 0,
+                    "tristate": false
+                  },
+                  "checkBox_3": {
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "checkable": true,
+                    "checked": false,
+                    "text": "Control",
+                    "checkState": 0,
+                    "tristate": false
+                  }
+                }
+              }
             }
           ]
         },
@@ -1983,37 +3067,6 @@
           "name": "Profile2",
           "category": [],
           "actions": [
-            {
-              "launcher": "eric.['Debug'].Debug Action-(0, 0, 1)",
-              "control": 0,
-              "controlType": "IMAGE_BUTTON",
-              "currentState": 0,
-              "profileName": "Profile2",
-              "deviceFamily": "Elgato Stream Deck XL",
-              "parameters": {
-                "states": [
-                  {
-                    "imagebutton": {
-                      "image": "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",
-                      "text": {
-                        "show": true,
-                        "text": "AAA",
-                        "font": "MS Shell Dlg 2",
-                        "bold": false,
-                        "italics": false,
-                        "underline": false,
-                        "strikethrough": false,
-                        "fontsize": 27.0,
-                        "alignv": 1,
-                        "alignh": 1,
-                        "color_fg": "#ffffff"
-                      },
-                      "color_background": "#000000"
-                    }
-                  }
-                ]
-              }
-            },
             {
               "launcher": "eric.['Device'].Switch Profile-(0, 0, 1)",
               "control": 7,
@@ -2075,6 +3128,829 @@
                     },
                     "button": {
                       "ledstate": 0
+                    },
+                    "rotaryencoder": {
+                      "ledringmode": 0
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "launcher": "eric.['OBS Websocket', 'Sources'].Source Visibility-(0, 0, 1)",
+              "control": 0,
+              "controlType": "IMAGE_BUTTON",
+              "currentState": 1,
+              "profileName": "Profile2",
+              "deviceFamily": "Elgato Stream Deck XL",
+              "parameters": {
+                "states": [
+                  {
+                    "imagebutton": {
+                      "image": "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",
+                      "text": {
+                        "show": true,
+                        "text": "Speaker 1\nLokal",
+                        "font": "MS Shell Dlg 2",
+                        "bold": false,
+                        "italics": false,
+                        "underline": false,
+                        "strikethrough": false,
+                        "fontsize": 15.0,
+                        "alignv": 1,
+                        "alignh": 1,
+                        "color_fg": "#ffffff"
+                      },
+                      "color_background": "#000000"
+                    },
+                    "button": {
+                      "ledstate": 0
+                    },
+                    "rotaryencoder": {
+                      "ledringmode": 0
+                    }
+                  },
+                  {
+                    "button": {
+                      "ledstate": 0
+                    },
+                    "imagebutton": {
+                      "text": {
+                        "show": true,
+                        "text": "Speaker 1\nLokal",
+                        "font": "MS Shell Dlg 2",
+                        "bold": false,
+                        "italics": false,
+                        "underline": false,
+                        "strikethrough": false,
+                        "fontsize": 15.0,
+                        "alignv": 1,
+                        "alignh": 1,
+                        "color_fg": "#000000"
+                      },
+                      "color_background": "#ffaa00",
+                      "image": "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"
+                    },
+                    "rotaryencoder": {
+                      "ledringmode": 0
+                    }
+                  },
+                  {
+                    "button": {
+                      "ledstate": 0
+                    },
+                    "imagebutton": {
+                      "text": {
+                        "show": true,
+                        "text": "Speaker 1\nLokal",
+                        "font": "MS Shell Dlg 2",
+                        "bold": false,
+                        "italics": false,
+                        "underline": false,
+                        "strikethrough": false,
+                        "fontsize": 15.0,
+                        "alignv": 1,
+                        "alignh": 1,
+                        "color_fg": "#ffffff"
+                      },
+                      "color_background": "#ff0000",
+                      "image": "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"
+                    },
+                    "rotaryencoder": {
+                      "ledringmode": 0
+                    }
+                  }
+                ],
+                "gui": {
+                  "account_combo": {
+                    "itemTexts": [
+                      "Local Host",
+                      "WIR Keller OBS"
+                    ],
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "currentIndex": 1,
+                    "currentText": "WIR Keller OBS",
+                    "editable": false,
+                    "duplicatesEnabled": false,
+                    "palceholderText": ""
+                  },
+                  "sourcename_combo": {
+                    "currentIndex": 0,
+                    "currentText": "Output 1",
+                    "itemTexts": [
+                      "Output 1",
+                      "Bild",
+                      "Ninja_Slides",
+                      "Ninja_Speaker1",
+                      "Ninja_Speaker2",
+                      "Dummy_Hintergrund",
+                      "Output 5",
+                      "Output 2",
+                      "Output 4"
+                    ],
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "editable": true,
+                    "duplicatesEnabled": false,
+                    "palceholderText": ""
+                  },
+                  "group_combo": {
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "currentIndex": 1,
+                    "currentText": "SPEAKER_1",
+                    "editable": true,
+                    "duplicatesEnabled": false,
+                    "palceholderText": "",
+                    "itemTexts": [
+                      "SPEAKER_!",
+                      "SPEAKER_1"
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "launcher": "eric.['OBS Websocket', 'Sources'].Source Visibility-(0, 0, 1)",
+              "control": 1,
+              "controlType": "IMAGE_BUTTON",
+              "currentState": 0,
+              "profileName": "Profile2",
+              "deviceFamily": "Elgato Stream Deck XL",
+              "parameters": {
+                "states": [
+                  {
+                    "imagebutton": {
+                      "image": "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",
+                      "text": {
+                        "show": true,
+                        "text": "Speaker 1\nRemote",
+                        "font": "MS Shell Dlg 2",
+                        "bold": false,
+                        "italics": false,
+                        "underline": false,
+                        "strikethrough": false,
+                        "fontsize": 15.0,
+                        "alignv": 1,
+                        "alignh": 1,
+                        "color_fg": "#ffffff"
+                      },
+                      "color_background": "#000000"
+                    },
+                    "button": {
+                      "ledstate": 0
+                    },
+                    "rotaryencoder": {
+                      "ledringmode": 0
+                    }
+                  },
+                  {
+                    "button": {
+                      "ledstate": 0
+                    },
+                    "imagebutton": {
+                      "text": {
+                        "show": true,
+                        "text": "Speaker 1\nRemote",
+                        "font": "MS Shell Dlg 2",
+                        "bold": false,
+                        "italics": false,
+                        "underline": false,
+                        "strikethrough": false,
+                        "fontsize": 15.0,
+                        "alignv": 1,
+                        "alignh": 1,
+                        "color_fg": "#000000"
+                      },
+                      "color_background": "#ffaa00",
+                      "image": "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"
+                    },
+                    "rotaryencoder": {
+                      "ledringmode": 0
+                    }
+                  },
+                  {
+                    "button": {
+                      "ledstate": 0
+                    },
+                    "imagebutton": {
+                      "text": {
+                        "show": true,
+                        "text": "Speaker 1\nRemote",
+                        "font": "MS Shell Dlg 2",
+                        "bold": false,
+                        "italics": false,
+                        "underline": false,
+                        "strikethrough": false,
+                        "fontsize": 15.0,
+                        "alignv": 1,
+                        "alignh": 1,
+                        "color_fg": "#ffffff"
+                      },
+                      "color_background": "#ff0000",
+                      "image": "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"
+                    },
+                    "rotaryencoder": {
+                      "ledringmode": 0
+                    }
+                  }
+                ],
+                "gui": {
+                  "account_combo": {
+                    "itemTexts": [
+                      "Local Host",
+                      "WIR Keller OBS"
+                    ],
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "currentIndex": 1,
+                    "currentText": "WIR Keller OBS",
+                    "editable": false,
+                    "duplicatesEnabled": false,
+                    "palceholderText": ""
+                  },
+                  "sourcename_combo": {
+                    "currentIndex": 0,
+                    "currentText": "Ninja_Speaker1",
+                    "itemTexts": [
+                      "Ninja_Speaker1",
+                      "Bild",
+                      "Ninja_Slides",
+                      "Ninja_Speaker2",
+                      "Dummy_Hintergrund",
+                      "Output 5",
+                      "Output 2",
+                      "Output 4",
+                      "Output 1"
+                    ],
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "editable": true,
+                    "duplicatesEnabled": false,
+                    "palceholderText": ""
+                  },
+                  "group_combo": {
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "currentIndex": 0,
+                    "currentText": "SPEAKER_1",
+                    "editable": true,
+                    "duplicatesEnabled": false,
+                    "palceholderText": "",
+                    "itemTexts": [
+                      "SPEAKER_1"
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "launcher": "eric.['OBS Websocket', 'Sources'].Source Visibility-(0, 0, 1)",
+              "control": 8,
+              "controlType": "IMAGE_BUTTON",
+              "currentState": 1,
+              "profileName": "Profile2",
+              "deviceFamily": "Elgato Stream Deck XL",
+              "parameters": {
+                "states": [
+                  {
+                    "imagebutton": {
+                      "image": "/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABgAGADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD5/ooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK6uz8F/a9B0DVP7Q2f2tqZ0/y/Jz5XKjfnd833umB060m0t/66jSucpRXqK/CfSJdcuvDsHjmyl8QI8iQWQspNkhUEgNLnarYByBux05rn77wE0XhvTtd0/URfWss4tb9RDtexnyBtcBjkejcZ46ZFN6CWuxx1FehD4XeV4j8QWl7rsNno+hFBd6pLAerAbQsYJJY56Z/mBSXvw70e0i0/Vk8YwT+GLqVoJNUjsZC1vKFLBHhzu5xxz3ye2QOlzz6ivRZfh94auvDusapoPjj+1JNLgE8sH9kyQZBOB8zt/IGvOqOlw62CiiigAooooAK9Ot72PTvhh4Mvps+VbeIZJnx12rsJ/lXmNb914l+0+B9P8ADf2Tb9ju5bn7R5md+8AbduOMY65qWrtX8/yaHey08vzTPZ/EGv3byanqfhjxL8OtPguA8iXER8rUJFIyQwIJ3np65weK4PwTq1v4N0mXUZ763v7zWsW0ekh0mjC7h++uF5wQfuqcE5PbNea1LbTfZ7qGfbu8t1fGcZwc05Ntf1uELJ/1se4+I7vS9U8Q+PvCF/qltpVxe3kF1Z3V02yEuirlHbsCOhP/ANY8j4hOl+FfhoPCkGt2Gr6ne6gL24k0+TzYIUVdqgPjlj7e49M8j4t1/wD4SnxVqGt/Zvsv2uQP5Pmb9mFAxuwM9PSsWqvZ39fx/wCHZCXupPy/D/hj0P4ff8iR8QP+wZH/AOhmvPK2dH8S3uiaVrGn20UDw6rAIJ2kUllUHOVwRg/XNY1JaJrz/Rf5FPe/l+rCiiigDa8N6Zoep3k0eu+If7FgWPck32J7ne2fu7UII45z7V1GtfD3QLHwRceJtL8Zf2jEkqwwxSaY9t57lgCELt82ASTgHpWN8PfDVv4p8Ww2V6zixhje6uRGfmaNBkqvueB+NUvFPia58TamJnRbext18qysouI7aIdFUevqe5ojvfp/X9f1oPt/X9f164dd9cfDzTdO1i2tdW8V22n2kulxai1xLbEt+8/5ZpGGJcj2I+lcz4c0KPX76WCXWNN0qOKIyvNfzFFIBAIXAJZuche+DXsdxrvhH/hN7a2mutB1GF/D1vbWd7qECz20U6E48xc5TI68gjIzSvq/66r9Lj6f12f6nn+o+AdKTSxrWi+KotX0eCdItQmis3jmtFY4DmFjll/EZP44sH4Vzr4xg0Yaqkmn3lm97ZanFBuS4jVC3C7uDxgjJxkHnIrq/FPiKw0zwTqej/8AFEtqmrGOGNfDEO1EjDBi00pOO2AO2c9M4u+AdYtdHmsvBUF7b6vOlvdXU92hWWK1ZoSfKt3HX1ZgcZyB1NUt1/XX9dvxJezt0/y/Tf8AA8/0zwDpM3hTS/EWs+LbfSbS+eaMo9o80gZGwNqocuD3PGOOuamvPhvp+ma3HFqPi+xttFnsVvrbUjCzNPGxwAsIO7d14z0/IdX4J12yufhzpml2134Oi1PT7iYyL4mTAVHbcGibpnsRz+HeLT/EFvJ8QdRh8Yan4X1i4msRFYXjxLc6fbODlU6LtHUEj8SalP3bv+tf8v8AMp72X9af5nHaz4CtI9Ck1rwx4ig8QWMEixXQS2eCaAscKTGxJ2k8Z9fxx2HhX4faV4Z8c6DHqvi61j8QpcQynSY7V3wTghDKDgNg9CP0Oav654v07w14Yu7Zo/BU+pXssOyLwvAdnlpIHYyyZx2wFx3zz2H0/wAN3/xVtPHSeNtDi0ye5iuRbyzkXKvgDYyfwjI+8SAKU1eL9Pv/AK/4I4O0l2v/AF/XyOQfwRa6ne674g17X4NC0gapPbxTPbtPJNJvJIWNSCQB1NYPinwpYaJY2eo6R4js9a0+6do1eKNopY2UAkPG2SvXjJroT440Rv7S8PeItHOq6QNUuLq1ubS5McsJdjkqR8rg9cHjnvxWR418LaTpOl6Lr3h+6vJtI1ZJPKS+RRNE0bYYNt4PJ6j0rV6yd99f12M0rRXyMDw/r+o+GNag1bS5/KuoScEjKsCMFWHcEVu+IPiJe6/pc2nLoug6ZBO4ec6bYiJpSDkbmJJPPNcfRULQp67hRRRQAVv+DvEv/CJ6+NU+yfasQSw+V5mz76Fc5wemc9KwKKACiiigAooooA6rw548vfDulSaYdJ0XVLJpTMIdTsxMEcgAkcg9APyqp4q8Y6r4wu4JtRMEcVtH5Vta20flwwL6Kvb9eg9KwKKFpsD13CiiigAooooAKKKKACiiigAooooAKKKKAP/Z",
+                      "text": {
+                        "show": true,
+                        "text": "Speaker 2\nLokal",
+                        "font": "MS Shell Dlg 2",
+                        "bold": false,
+                        "italics": false,
+                        "underline": false,
+                        "strikethrough": false,
+                        "fontsize": 15.0,
+                        "alignv": 1,
+                        "alignh": 1,
+                        "color_fg": "#ffffff"
+                      },
+                      "color_background": "#000000"
+                    },
+                    "button": {
+                      "ledstate": 0
+                    },
+                    "rotaryencoder": {
+                      "ledringmode": 0
+                    }
+                  },
+                  {
+                    "button": {
+                      "ledstate": 0
+                    },
+                    "imagebutton": {
+                      "text": {
+                        "show": true,
+                        "text": "Speaker 2\nLokal",
+                        "font": "MS Shell Dlg 2",
+                        "bold": false,
+                        "italics": false,
+                        "underline": false,
+                        "strikethrough": false,
+                        "fontsize": 15.0,
+                        "alignv": 1,
+                        "alignh": 1,
+                        "color_fg": "#000000"
+                      },
+                      "color_background": "#ffaa00",
+                      "image": "/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABgAGADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDsKKKK/Jz7IKKKKACiiigAooooAKKKKACiiigAooooAKKKxLjxD5GoatafZd39n2Yut3mY8zIY7cY4+71561dOnKpflW3/AA36kTnGGsv60v8AobdFcU/jq/i06DVpvDNzHpDojS3RuE3JuwMiPqwyRzxnrxWta+Jg+s3ulXlp9luYozNbZk3Lcxf3lOBg+o7e+DW88FXirtfc09t9n0vr2IWIpt2v+D/r/M36K5RvGhbSNJnttMkudR1RC0FlHKBwBkkuQAAPXFFt4t1G4+2WR8PSx63bososHuUCyxlsblkxg478e1P6lXtdr8V3tffa/XbzD29O9r/g/X7/AC3OrorkoPFWtR6zp9hqnhn7Al7I0aS/b0lwQpPRR/hXW1lWoTotc9tezT/FNlwqRmm49Pl+YUUUViWFFFFABXHS2z3ni3xNaxkB5tLijXPqQ4H867Gsy30jyPEV5q3n7vtMEcXlbMbdhPOc85z6V04eqqam3vbT1un+hjVp87iumt/ua/U870fTLdfsNhrOjeL7uWMojRzfvLSNhjkEEDYPx49a6jxFYSeIr9LZLea1g00mV77DRuxKn93EeMgj7x6dO/Tr6ZLH5sLx5xvUrn0zXRUzCU6iqWs1fq7K+9kZ/VkoOO/9aHnGkxXthpPhXX7WxmvobezeC4ggG6UK3IZV78itvRvtut+L316bTbrT7OGz+ywpdpslkYtuYlewGO//AOrf0PTP7F0Sz03zvO+zxhPM27d3vjJx+daFFfGqUpcq3uk9dm29vn9w4ULWbfnbzsct4m/5Gjwr/wBfcv8A6LNdTWffaRb6hf6feSvKsljI0kQQgAkrg7uP5YrQrlq1Iypwiuif5t/qa04uLk31d/wS/QKKKKwNDN1m91Oyt430vSf7SlZ8NH9pWHaMdct1+lYul+K9Wu/Ekej33h37G5jMkki3qzeUMHG4KOMngZIrR8VavNo2hvNbBftUsiQQF/uq7nAJ9h1/CrWjaPDo1mYkZpZ5DvuLh+Xmc9WJ/p2rth7OOHcpwTbuk9b+u9tL9tTnfM6toy0W+33bX/E0a5iLxVeXemy3Fhoc13cJeyWiwpMAPk/jZyAFBrX1fU30u3jkj068vnkkEax2sYYgkE5bJAVeOvvXAJpmvHww0qQ6paOmrTTXNtZymKd4m/uHGGweRxz2rTB4eE481S26td+vZp9v8ya1WSdo32/Vfpc6mz8UX0l2dO1HQ5NP1KSJpLWKS4V45yo+6JFGAfw4FRp41ifQG1D7EyXUNylrc2byYaF2cLyccjnI459qwdA0i6u/EdnqRPiVbKwEjt/bcmXZypUCNAM9Dknv0qLxLp0t/wCb4kkgmsEe4toY7c7keYCUASSr6+gIyB17Y7PquGdZQa7bN73+HdvVa73RiqtXlv8A1bTXb5ee50154pv01u/0rTtAmv7i0WNty3CxoQwydxb7pHYc59qbb+Lru90ppbPQLmbUYrlrWez81VETqMnMh429OcVgeI9MuLfxde300HiOSzu44th0VurKuCJFHPuD71LeaVKPCdlJoFlrenQR3JluraOQw3kqkEFupyc4OD1HpUrD4bkhotba3dr21T97v2S9RKrVvK72v276W07d7nQab4nnl1JdO1rSZdJu5EaSENMsscoXqA68ZA5x6Vz2u+K77WfC+qyWOgXD6Q8EiLftOi5xkbhGeSvvVbSPD93q+tQXIfxJHZ20coLa3KNxd0KjYnbrkn8KDeaxB4FuPDLeGtTe+htngaWOMeSy/wB5W/iOOwGTWsMPQhVTgk3eN1dpLV3e9+i3btcmdSpKm1JtaO2m/wCH+Xc6KXxJcWa2Ol6VpMuqX/2SOaSNZViSNCMAs7cZPYVpaJrd1qU1xa3+kXOm3UAVmWRg6MGzjY44bpzWY/hzUlnt9W0fURZXrWkUM8E8O+OUKOM91Iz1HpVzw5rd9f3Wo6bqkFvHqGnugla2YmNw4yCM8j6GuGrCk6TlTSdt3d3Tv22t00+86oyn7S02+va3+d/+Caeq6VZ61p0thfReZBJjIBwQRyCD2IrO0jwpb6TdrdHUtUvpUUrH9tujIEB64GAK3qK4o16kYOmnozZ04uXM1qFFFFZFhWZr2kf23potPP8AJxNHLv2bvuMGxjI64rToqoTlCSnHdEyipKzCiiipKCiiigDD1jwvb6veLeDUNSsbgIIzJY3JiLKCSARyO5qxomgWOgW0kVmJGaV/MmmmffJK3qxrUorZ4iq4ezcvd7GapwUuZLUKKKKxNAooooAKKKKACiiigAooooAKKKKAP//Z"
+                    },
+                    "rotaryencoder": {
+                      "ledringmode": 0
+                    }
+                  },
+                  {
+                    "button": {
+                      "ledstate": 0
+                    },
+                    "imagebutton": {
+                      "text": {
+                        "show": true,
+                        "text": "Speaker 2\nLokal",
+                        "font": "MS Shell Dlg 2",
+                        "bold": false,
+                        "italics": false,
+                        "underline": false,
+                        "strikethrough": false,
+                        "fontsize": 15.0,
+                        "alignv": 1,
+                        "alignh": 1,
+                        "color_fg": "#ffffff"
+                      },
+                      "color_background": "#ff0000",
+                      "image": "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"
+                    },
+                    "rotaryencoder": {
+                      "ledringmode": 0
+                    }
+                  }
+                ],
+                "gui": {
+                  "account_combo": {
+                    "itemTexts": [
+                      "Local Host",
+                      "WIR Keller OBS"
+                    ],
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "currentIndex": 1,
+                    "currentText": "WIR Keller OBS",
+                    "editable": false,
+                    "duplicatesEnabled": false,
+                    "palceholderText": ""
+                  },
+                  "sourcename_combo": {
+                    "currentIndex": 0,
+                    "currentText": "Output 2",
+                    "itemTexts": [
+                      "Output 2",
+                      "Bild",
+                      "Ninja_Slides",
+                      "Ninja_Speaker1",
+                      "Ninja_Speaker2",
+                      "Dummy_Hintergrund",
+                      "Output 5",
+                      "Output 4",
+                      "Output 1"
+                    ],
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "editable": true,
+                    "duplicatesEnabled": false,
+                    "palceholderText": ""
+                  },
+                  "group_combo": {
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "currentIndex": 0,
+                    "currentText": "SPEAKER_2",
+                    "editable": true,
+                    "duplicatesEnabled": false,
+                    "palceholderText": "",
+                    "itemTexts": [
+                      "SPEAKER_2"
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "launcher": "eric.['OBS Websocket', 'Sources'].Source Visibility-(0, 0, 1)",
+              "control": 9,
+              "controlType": "IMAGE_BUTTON",
+              "currentState": 0,
+              "profileName": "Profile2",
+              "deviceFamily": "Elgato Stream Deck XL",
+              "parameters": {
+                "states": [
+                  {
+                    "imagebutton": {
+                      "image": "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",
+                      "text": {
+                        "show": true,
+                        "text": "Speaker 2\nRemote",
+                        "font": "MS Shell Dlg 2",
+                        "bold": false,
+                        "italics": false,
+                        "underline": false,
+                        "strikethrough": false,
+                        "fontsize": 15.0,
+                        "alignv": 1,
+                        "alignh": 1,
+                        "color_fg": "#ffffff"
+                      },
+                      "color_background": "#000000"
+                    },
+                    "button": {
+                      "ledstate": 0
+                    },
+                    "rotaryencoder": {
+                      "ledringmode": 0
+                    }
+                  },
+                  {
+                    "button": {
+                      "ledstate": 0
+                    },
+                    "imagebutton": {
+                      "text": {
+                        "show": true,
+                        "text": "Speaker 2\nRemote",
+                        "font": "MS Shell Dlg 2",
+                        "bold": false,
+                        "italics": false,
+                        "underline": false,
+                        "strikethrough": false,
+                        "fontsize": 15.0,
+                        "alignv": 1,
+                        "alignh": 1,
+                        "color_fg": "#000000"
+                      },
+                      "color_background": "#ffaa00",
+                      "image": "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"
+                    },
+                    "rotaryencoder": {
+                      "ledringmode": 0
+                    }
+                  },
+                  {
+                    "button": {
+                      "ledstate": 0
+                    },
+                    "imagebutton": {
+                      "text": {
+                        "show": true,
+                        "text": "Speaker 2\nRemote",
+                        "font": "MS Shell Dlg 2",
+                        "bold": false,
+                        "italics": false,
+                        "underline": false,
+                        "strikethrough": false,
+                        "fontsize": 15.0,
+                        "alignv": 1,
+                        "alignh": 1,
+                        "color_fg": "#ffffff"
+                      },
+                      "color_background": "#ff0000",
+                      "image": "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"
+                    },
+                    "rotaryencoder": {
+                      "ledringmode": 0
+                    }
+                  }
+                ],
+                "gui": {
+                  "account_combo": {
+                    "itemTexts": [
+                      "Local Host",
+                      "WIR Keller OBS"
+                    ],
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "currentIndex": 1,
+                    "currentText": "WIR Keller OBS",
+                    "editable": false,
+                    "duplicatesEnabled": false,
+                    "palceholderText": ""
+                  },
+                  "sourcename_combo": {
+                    "currentIndex": 0,
+                    "currentText": "Ninja_Speaker2",
+                    "itemTexts": [
+                      "Ninja_Speaker2",
+                      "Bild",
+                      "Ninja_Slides",
+                      "Ninja_Speaker1",
+                      "Dummy_Hintergrund",
+                      "Output 5",
+                      "Output 2",
+                      "Output 4",
+                      "Output 1"
+                    ],
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "editable": true,
+                    "duplicatesEnabled": false,
+                    "palceholderText": ""
+                  },
+                  "group_combo": {
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "currentIndex": 0,
+                    "currentText": "SPEAKER_2",
+                    "editable": true,
+                    "duplicatesEnabled": false,
+                    "palceholderText": "",
+                    "itemTexts": [
+                      "SPEAKER_2"
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "launcher": "eric.['OBS Websocket', 'Sources'].Source Visibility-(0, 0, 1)",
+              "control": 16,
+              "controlType": "IMAGE_BUTTON",
+              "currentState": 1,
+              "profileName": "Profile2",
+              "deviceFamily": "Elgato Stream Deck XL",
+              "parameters": {
+                "states": [
+                  {
+                    "imagebutton": {
+                      "image": "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",
+                      "text": {
+                        "show": true,
+                        "text": "Slides\nLokal",
+                        "font": "MS Shell Dlg 2",
+                        "bold": false,
+                        "italics": false,
+                        "underline": false,
+                        "strikethrough": false,
+                        "fontsize": 15.0,
+                        "alignv": 1,
+                        "alignh": 1,
+                        "color_fg": "#ffffff"
+                      },
+                      "color_background": "#000000"
+                    },
+                    "button": {
+                      "ledstate": 0
+                    },
+                    "rotaryencoder": {
+                      "ledringmode": 0
+                    }
+                  },
+                  {
+                    "button": {
+                      "ledstate": 0
+                    },
+                    "imagebutton": {
+                      "text": {
+                        "show": true,
+                        "text": "Slides\nLokal",
+                        "font": "MS Shell Dlg 2",
+                        "bold": false,
+                        "italics": false,
+                        "underline": false,
+                        "strikethrough": false,
+                        "fontsize": 15.0,
+                        "alignv": 1,
+                        "alignh": 1,
+                        "color_fg": "#000000"
+                      },
+                      "color_background": "#ffaa00",
+                      "image": "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"
+                    },
+                    "rotaryencoder": {
+                      "ledringmode": 0
+                    }
+                  },
+                  {
+                    "button": {
+                      "ledstate": 0
+                    },
+                    "imagebutton": {
+                      "text": {
+                        "show": true,
+                        "text": "Slides\nLokal",
+                        "font": "MS Shell Dlg 2",
+                        "bold": false,
+                        "italics": false,
+                        "underline": false,
+                        "strikethrough": false,
+                        "fontsize": 15.0,
+                        "alignv": 1,
+                        "alignh": 1,
+                        "color_fg": "#ffffff"
+                      },
+                      "color_background": "#ff0000",
+                      "image": "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"
+                    },
+                    "rotaryencoder": {
+                      "ledringmode": 0
+                    }
+                  }
+                ],
+                "gui": {
+                  "account_combo": {
+                    "itemTexts": [
+                      "Local Host",
+                      "WIR Keller OBS"
+                    ],
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "currentIndex": 1,
+                    "currentText": "WIR Keller OBS",
+                    "editable": false,
+                    "duplicatesEnabled": false,
+                    "palceholderText": ""
+                  },
+                  "sourcename_combo": {
+                    "currentIndex": 0,
+                    "currentText": "Output 4",
+                    "itemTexts": [
+                      "Output 4",
+                      "Bild",
+                      "Ninja_Slides",
+                      "Ninja_Speaker1",
+                      "Ninja_Speaker2",
+                      "Dummy_Hintergrund",
+                      "Output 5",
+                      "Output 2",
+                      "Output 1"
+                    ],
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "editable": true,
+                    "duplicatesEnabled": false,
+                    "palceholderText": ""
+                  },
+                  "group_combo": {
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "currentIndex": 0,
+                    "currentText": "SLIDES",
+                    "editable": true,
+                    "duplicatesEnabled": false,
+                    "palceholderText": "",
+                    "itemTexts": [
+                      "SLIDES"
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "launcher": "eric.['OBS Websocket', 'Sources'].Source Visibility-(0, 0, 1)",
+              "control": 17,
+              "controlType": "IMAGE_BUTTON",
+              "currentState": 0,
+              "profileName": "Profile2",
+              "deviceFamily": "Elgato Stream Deck XL",
+              "parameters": {
+                "gui": {
+                  "account_combo": {
+                    "itemTexts": [
+                      "Local Host",
+                      "WIR Keller OBS"
+                    ],
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "currentIndex": 1,
+                    "currentText": "WIR Keller OBS",
+                    "editable": false,
+                    "duplicatesEnabled": false,
+                    "palceholderText": ""
+                  },
+                  "sourcename_combo": {
+                    "currentIndex": 0,
+                    "currentText": "Ninja_Slides",
+                    "itemTexts": [
+                      "Ninja_Slides",
+                      "Bild",
+                      "Ninja_Speaker1",
+                      "Ninja_Speaker2",
+                      "Dummy_Hintergrund",
+                      "Output 5",
+                      "Output 2",
+                      "Output 4",
+                      "Output 1"
+                    ],
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "editable": true,
+                    "duplicatesEnabled": false,
+                    "palceholderText": ""
+                  },
+                  "group_combo": {
+                    "enabled": true,
+                    "visible": true,
+                    "styleSheet": "",
+                    "currentIndex": 0,
+                    "currentText": "SLIDES",
+                    "editable": true,
+                    "duplicatesEnabled": false,
+                    "palceholderText": "",
+                    "itemTexts": [
+                      "SLIDES"
+                    ]
+                  }
+                },
+                "states": [
+                  {
+                    "imagebutton": {
+                      "image": "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",
+                      "text": {
+                        "show": true,
+                        "text": "Slides\nRemote",
+                        "font": "MS Shell Dlg 2",
+                        "bold": false,
+                        "italics": false,
+                        "underline": false,
+                        "strikethrough": false,
+                        "fontsize": 15.0,
+                        "alignv": 1,
+                        "alignh": 1,
+                        "color_fg": "#ffffff"
+                      },
+                      "color_background": "#000000"
+                    },
+                    "button": {
+                      "ledstate": 0
+                    },
+                    "rotaryencoder": {
+                      "ledringmode": 0
+                    }
+                  },
+                  {
+                    "button": {
+                      "ledstate": 0
+                    },
+                    "imagebutton": {
+                      "text": {
+                        "show": true,
+                        "text": "Slides\nRemote",
+                        "font": "MS Shell Dlg 2",
+                        "bold": false,
+                        "italics": false,
+                        "underline": false,
+                        "strikethrough": false,
+                        "fontsize": 15.0,
+                        "alignv": 1,
+                        "alignh": 1,
+                        "color_fg": "#000000"
+                      },
+                      "color_background": "#ffaa00",
+                      "image": "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"
+                    },
+                    "rotaryencoder": {
+                      "ledringmode": 0
+                    }
+                  },
+                  {
+                    "button": {
+                      "ledstate": 0
+                    },
+                    "imagebutton": {
+                      "text": {
+                        "show": true,
+                        "text": "Slides\nRemote",
+                        "font": "MS Shell Dlg 2",
+                        "bold": false,
+                        "italics": false,
+                        "underline": false,
+                        "strikethrough": false,
+                        "fontsize": 15.0,
+                        "alignv": 1,
+                        "alignh": 1,
+                        "color_fg": "#ffffff"
+                      },
+                      "color_background": "#ff0000",
+                      "image": "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"
                     },
                     "rotaryencoder": {
                       "ledringmode": 0

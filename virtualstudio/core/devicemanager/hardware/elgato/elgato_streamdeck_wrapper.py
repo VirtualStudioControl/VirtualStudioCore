@@ -1,19 +1,15 @@
-from collections import Callable
-from typing import Union, Any
-
-from virtualstudio.common.io import filewriter
-from virtualstudio.common.structs.action.action_info import ActionInfo
 from virtualstudio.common.structs.hardware.controls.imagebutton_wrapper import ImagebuttonWrapper
 from virtualstudio.common.structs.hardware.hardware_wrapper import *
 
 from streamdeck.devices.streamdeck import StreamDeck
-from virtualstudio.common.tools import actiondatatools, icontools
-
+from threading import Lock
 
 class StreamdeckDeviceWrapper(HardwareWrapper):
 
     def __init__(self, device: StreamDeck):
         super().__init__(device, device.id(), device.deck_type(), "Elgato")
+
+        self.imageWriteLock = Lock()
 
         device.open()
 
@@ -46,8 +42,10 @@ class StreamdeckDeviceWrapper(HardwareWrapper):
     def __generateSetImage(self, index):
         def __cb(data: Any) -> bool:
             try:
-                self.device.set_key_image(index, data)
-            except:
+                with self.imageWriteLock:
+                    self.device.set_key_image(index, data)
+            except Exception as ex:
+                logger.exception(ex)
                 return False
             return True
 
