@@ -48,7 +48,7 @@ class MidiDeviceWrapper(HardwareWrapper):
 
     #region Button
     def appendButtonWrapper(self, c: Button):
-        wrapper = ButtonWrapper(ledStateSetter=self.__generateLEDSetterBTN(c))
+        wrapper = ButtonWrapper(ledStateSetter=self.__generateLEDSetterBTN(c), ident=c.index)
         self.device.addEventListener(c.statusPressed, c.idIn, self.__generateButtonWrapperCallbackPressed(wrapper))
         self.device.addEventListener(c.statusReleased, c.idIn, self.__generateButtonWrapperCallbackReleased(wrapper))
         self.controls[c.index] = wrapper
@@ -80,7 +80,7 @@ class MidiDeviceWrapper(HardwareWrapper):
     #region Fader
 
     def appendFaderWrapper(self, c: Fader):
-        wrapper = FaderWrapper(faderValueSetter=self.__generateValueSetterFader(c))
+        wrapper = FaderWrapper(faderValueSetter=self.__generateValueSetterFader(c), ident=c.index)
         self.device: IDevice
         if c.status_touch_begin == c.status_touch_end:
             self.device.addEventListener(c.status_touch_begin, c.idTouch, self.__generateFaderTouchCallback(wrapper))
@@ -119,7 +119,7 @@ class MidiDeviceWrapper(HardwareWrapper):
     #region Rotary Encoder
     def appendRotaryEncoderWrapper(self, c: RotaryEncoder):
         wrapper = RotaryEncoderWrapper(ledValueSetter=self.__generateValueSetterRotaryEncoder(c),
-                                       ledModeSetter=self.__generateModeSetterRotaryEncoder(c))
+                                       ledModeSetter=self.__generateModeSetterRotaryEncoder(c), ident=c.index)
         self.device: IDevice
 
         if c.status_up == c.status_down:

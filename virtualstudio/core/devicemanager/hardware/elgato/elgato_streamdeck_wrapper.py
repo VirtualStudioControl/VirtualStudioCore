@@ -25,9 +25,8 @@ class StreamdeckDeviceWrapper(HardwareWrapper):
         self.device.set_key_callback(self.__keyCallback)
 
     def setupImageButtonWrapper(self, idx: int):
-        wrapper = ImagebuttonWrapper(imageSetter=self.__generateSetImage(idx))
+        wrapper = ImagebuttonWrapper(imageSetter=self.__generateSetImage(idx), ident=idx)
         self.device : StreamDeck
-
         wrapper.setImage(self.device.BLANK_KEY_IMAGE)
         self.controls.append(wrapper)
 
