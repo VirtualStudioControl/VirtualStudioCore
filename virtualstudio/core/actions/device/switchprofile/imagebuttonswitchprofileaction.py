@@ -92,6 +92,10 @@ class ImageButtonSwitchProfileAction(ImageButtonAction):
         profile = self.getGUIParameter("combo_profile", "currentText")
 
         self.hardware = getDeviceByID(deviceNameToID(device))
+
+        if self.hardware is None:
+            self.logger.warning("Hardware not Found: {}".format(device))
+            return
         profileSet = getOrCreateProfileSet(self.hardware)
         self.hardware.bindProfile(profileSet.getProfile(profile))
     # endregion

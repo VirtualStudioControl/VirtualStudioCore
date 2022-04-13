@@ -4,6 +4,7 @@ from virtualstudio.common.structs.hardware.hardware_wrapper import *
 from streamdeck.devices.streamdeck import StreamDeck
 from threading import Lock
 
+
 class StreamdeckDeviceWrapper(HardwareWrapper):
 
     def __init__(self, device: StreamDeck):

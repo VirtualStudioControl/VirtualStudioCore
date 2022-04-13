@@ -21,7 +21,7 @@ If True, logs to Stdout
 #endregion
 
 #region Plugins
-PLUGIN_DIRECTORY = ["../VirtualStudioPlugins", "../libwsctrl", "../OBSWebsocketPlugin", "../DMXPlugin"]
+PLUGIN_DIRECTORY = ["../VirtualStudioPlugins", "../libwsctrl", "../OBSWebsocketPlugin", "../DMXPlugin", "../systemfunctionsplugin"]
 """
 List of directories containing all plugins and libaries. Before a plugin, all libaries should be listed
 """
