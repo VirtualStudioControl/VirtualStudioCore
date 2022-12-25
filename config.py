@@ -28,7 +28,7 @@ List of directories containing all plugins and libaries. Before a plugin, all li
 #endregion
 
 #region Data
-ACCOUNT_DATA_DIRECTORY = "./data/account"
+ACCOUNT_DATA_DIRECTORY = "../r3s-config-data/data/account"
 """
 Direcotry containing profile data
 """
@@ -38,12 +38,12 @@ ACCOUNT_DATA_FILE = "accounts.json"
 Serialised ProfileSets
 """
 
-PROFILE_DATA_DIRECTORY = "./data/profile"
+PROFILE_DATA_DIRECTORY = "../r3s-config-data/data/vscore1/profile"
 """
 Direcotry containing profile data
 """
 
-PROFILE_SET_DATA_FILE = "profilesets.json"
+PROFILE_SET_DATA_FILE = "profilesets.json" #"emptyset.json" #
 """
 Serialised ProfileSets
 """
