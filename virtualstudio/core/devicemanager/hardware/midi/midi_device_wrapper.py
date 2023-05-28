@@ -10,6 +10,7 @@ from virtualstudio.common.structs.hardware.controls.button_wrapper import Button
 from virtualstudio.common.structs.hardware.controls.fader_wrapper import FaderWrapper
 from virtualstudio.common.structs.hardware.controls.rotaryencoder_wrapper import RotaryEncoderWrapper
 from virtualstudio.common.structs.hardware.hardware_wrapper import *
+from virtualstudio.core.net import pytideserver
 
 logger = logengine.getLogger()
 
@@ -57,6 +58,7 @@ class MidiDeviceWrapper(HardwareWrapper):
 
         def cb(message: List[int], deltatime):
             wrapper.keyDown()
+            pytideserver.sendButtonPress(wrapper.controlID, self)
 
         return cb
 
@@ -64,7 +66,7 @@ class MidiDeviceWrapper(HardwareWrapper):
 
         def cb(message: List[int], deltatime):
             wrapper.keyUp()
-
+            pytideserver.sendButtonRelease(wrapper.controlID, self)
         return cb
 
 
@@ -94,14 +96,17 @@ class MidiDeviceWrapper(HardwareWrapper):
         def cb(message: List[int], deltatime):
             if message[2] > 63:
                 wrapper.touchStart()
+                pytideserver.sendFaderTouchBegin(wrapper.controlID, self)
             else:
                 wrapper.touchEnd()
+                pytideserver.sendFaderTouchEnd(wrapper.controlID, self)
 
         return cb
 
     def __generateFaderValueCallback(self, wrapper: FaderWrapper):
         def cb(message: List[int], deltatime):
             wrapper.touchValueChanged(message[2])
+            pytideserver.sendFaderValueChange(message[2], wrapper.controlID, self)
 
         return cb
 
@@ -134,15 +139,17 @@ class MidiDeviceWrapper(HardwareWrapper):
         def cb(message: List[int], deltatime):
             if message[2] > 63:
                 wrapper.keyDown()
+                pytideserver.sendRotaryEncoderPress(wrapper.controlID, self)
             else:
                 wrapper.keyUp()
+                pytideserver.sendRotaryEncoderRelease(wrapper.controlID, self)
 
         return cb
 
     def __generateRotaryEncoderValueCallback(self, wrapper: RotaryEncoderWrapper):
         def cb(message: List[int], deltatime):
             wrapper.rotate(message[2])
-
+            pytideserver.sendRotaryEncoderValueChange(message[2], wrapper.controlID, self)
         return cb
 
     def __generateValueSetterRotaryEncoder(self, c: RotaryEncoder) -> Callable[[int], bool]:

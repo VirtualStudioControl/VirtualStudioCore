@@ -13,6 +13,7 @@ from virtualstudio.common.profile_manager import profilemanager
 
 from virtualstudio.core.data import constants as consts
 from virtualstudio.core.devicemanager.device_manager import loadDevices, closeDevices
+from virtualstudio.core.net import pytideserver
 from virtualstudio.core.net.comserver import ComServer
 from virtualstudio.core.tools.tools import storeAccounts, loadAccounts as loadAccountManager
 
@@ -64,13 +65,19 @@ def run():
         loadData()
         loadDevices()
 
+        pytideserver.runServer()
+
         consts.COM_SERVER = ComServer("127.0.0.1", config.CONFIGURATION_PORT)
         eventmanager.registerSink(consts.COM_SERVER.sendMessageJSON)
         consts.COM_SERVER.run()
 
+
+
     finally:
         print("Closing Devices")
+        pytideserver.stopServer()
         closeDevices()
+
 #        while(True):
 #            sleep(1)
 

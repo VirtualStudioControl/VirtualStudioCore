@@ -36,8 +36,10 @@ class StreamdeckDeviceWrapper(HardwareWrapper):
 
         if isDown:
             control.keyDown()
+            pytideserver.sendButtonPress(buttonID, self)
         else:
             control.keyUp()
+            pytideserver.sendButtonRelease(buttonID, self)
 
     def __generateSetImage(self, index):
         def __cb(data: Any) -> bool:

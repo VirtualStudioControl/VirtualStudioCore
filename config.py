@@ -5,6 +5,12 @@ CONFIGURATION_PORT: int = 4233
 """
 Port for Communication with the configuration tool
 """
+
+EVENT_SERVER_PORT: int = 4234
+"""
+Port for the event distribution server
+"""
+
 #endregion
 
 #region Logging
