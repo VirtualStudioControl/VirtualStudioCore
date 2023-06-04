@@ -115,6 +115,8 @@ class MidiDeviceWrapper(HardwareWrapper):
             if value < 0 or value > 127:
                 return False
             c.device.setFaderValue(c, value)
+            pytideserver.sendFaderValueChange(value, c.index, self)
+
             return True
 
         return __cb
@@ -157,6 +159,7 @@ class MidiDeviceWrapper(HardwareWrapper):
             if value < 0 or value > 127:
                 return False
             c.device.setRotaryValue(c, value)
+            pytideserver.sendRotaryEncoderValueChange(value, c.index, self)
             return True
 
         return __cb
