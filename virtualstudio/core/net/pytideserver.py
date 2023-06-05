@@ -43,35 +43,40 @@ def sendProfileChange(profileName: str, device: 'HardwareWrapper'):
     msg: Message = createMessage(MessageSendMode.Unreliable, EVENT_MESSAGE_PROFILE_CHANGE)
     addHardwareWrapperToMsg(msg, device)
     msg.addString(profileName)
-    server.sendToAll(msg)
+    if server is not None:
+        server.sendToAll(msg)
 
 
 def sendButtonPress(contorlID: int, device: 'HardwareWrapper'):
     msg: Message = createMessage(MessageSendMode.Unreliable, EVENT_MESSAGE_BUTTON_PRESS)
     addHardwareWrapperToMsg(msg, device)
     msg.addInt(contorlID)
-    server.sendToAll(msg)
+    if server is not None:
+        server.sendToAll(msg)
 
 
 def sendButtonRelease(contorlID: int, device: 'HardwareWrapper'):
     msg: Message = createMessage(MessageSendMode.Unreliable, EVENT_MESSAGE_BUTTON_RELEASE)
     addHardwareWrapperToMsg(msg, device)
     msg.addInt(contorlID)
-    server.sendToAll(msg)
+    if server is not None:
+        server.sendToAll(msg)
 
 
 def sendFaderTouchBegin(contorlID: int, device: 'HardwareWrapper'):
     msg: Message = createMessage(MessageSendMode.Unreliable, EVENT_MESSAGE_FADER_TOUCH_BEGIN)
     addHardwareWrapperToMsg(msg, device)
     msg.addInt(contorlID)
-    server.sendToAll(msg)
+    if server is not None:
+        server.sendToAll(msg)
 
 
 def sendFaderTouchEnd(contorlID: int, device: 'HardwareWrapper'):
     msg: Message = createMessage(MessageSendMode.Unreliable, EVENT_MESSAGE_FADER_TOUCH_END)
     addHardwareWrapperToMsg(msg, device)
     msg.addInt(contorlID)
-    server.sendToAll(msg)
+    if server is not None:
+        server.sendToAll(msg)
 
 
 def sendFaderValueChange(value: int, contorlID: int, device: 'HardwareWrapper'):
@@ -79,21 +84,24 @@ def sendFaderValueChange(value: int, contorlID: int, device: 'HardwareWrapper'):
     addHardwareWrapperToMsg(msg, device)
     msg.addInt(contorlID)
     msg.addInt(value)
-    server.sendToAll(msg)
+    if server is not None:
+        server.sendToAll(msg)
 
 
 def sendRotaryEncoderPress(contorlID: int, device: 'HardwareWrapper'):
     msg: Message = createMessage(MessageSendMode.Unreliable, EVENT_MESSAGE_ROTARY_ENCODER_PRESS)
     addHardwareWrapperToMsg(msg, device)
     msg.addInt(contorlID)
-    server.sendToAll(msg)
+    if server is not None:
+        server.sendToAll(msg)
 
 
 def sendRotaryEncoderRelease(contorlID: int, device: 'HardwareWrapper'):
     msg: Message = createMessage(MessageSendMode.Unreliable, EVENT_MESSAGE_ROTARY_ENCODER_RELEASE)
     addHardwareWrapperToMsg(msg, device)
     msg.addInt(contorlID)
-    server.sendToAll(msg)
+    if server is not None:
+        server.sendToAll(msg)
 
 
 def sendRotaryEncoderValueChange(value: int, contorlID: int, device: 'HardwareWrapper'):
@@ -101,4 +109,5 @@ def sendRotaryEncoderValueChange(value: int, contorlID: int, device: 'HardwareWr
     addHardwareWrapperToMsg(msg, device)
     msg.addInt(contorlID)
     msg.addInt(value)
-    server.sendToAll(msg)
+    if server is not None:
+        server.sendToAll(msg)
