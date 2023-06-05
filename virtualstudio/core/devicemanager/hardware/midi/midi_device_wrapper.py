@@ -22,6 +22,10 @@ class MidiDeviceWrapper(HardwareWrapper):
         device.open()
 
         self.createControlWrappers()
+        self.addProfileChangedCallback(self.onProfileChangeEvent)
+
+    def onProfileChangeEvent(self, profileName):
+        pytideserver.sendProfileChange(profileName, self)
 
     def close(self):
         self.device.close()

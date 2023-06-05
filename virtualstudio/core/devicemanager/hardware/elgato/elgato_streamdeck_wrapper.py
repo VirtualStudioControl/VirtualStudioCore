@@ -4,6 +4,8 @@ from virtualstudio.common.structs.hardware.hardware_wrapper import *
 from streamdeck.devices.streamdeck import StreamDeck
 from threading import Lock
 
+from virtualstudio.core.net import pytideserver
+
 
 class StreamdeckDeviceWrapper(HardwareWrapper):
 
@@ -15,6 +17,10 @@ class StreamdeckDeviceWrapper(HardwareWrapper):
         device.open()
 
         self.createControlWrappers()
+        self.addProfileChangedCallback(self.onProfileChangeEvent)
+
+    def onProfileChangeEvent(self, profileName):
+        pytideserver.sendProfileChange(profileName, self)
 
     def close(self):
         self.device.close()
